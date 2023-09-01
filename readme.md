@@ -1,4 +1,4 @@
-### Persona 4 Watchface
+# Persona 4 Watchface
 
 This is a watchface for the Garmin Forerunner 645. It will work on the 245, 735, 745, and 945s, though small tweaks may be required to correctly position the time widget on those devices. The app features heart rate, steps, distance, battery, temperature (feels like and actual), humidity, a Persona 4 HUD, as well as a background that changes depending on the time of day or weather. Also has a special Dark Hour effect from Persona 3 if you look at the watch a few seconds before midnight strikes.
 
