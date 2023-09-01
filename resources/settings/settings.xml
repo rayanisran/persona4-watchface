@@ -1,0 +1,18 @@
+<settings>
+
+	<setting propertyKey="@Properties.Lat_u" title="@Strings.Latitude_u">
+		<settingConfig type="numeric" required="true"/>
+	</setting>
+
+	<setting propertyKey="@Properties.Lon_u" title="@Strings.Longitude_u">
+		<settingConfig type="numeric" required="true"/>
+	</setting>
+	
+<!--  <setting propertyKey="@Properties.lat" title="@Strings.Latitude">
+		<settingConfig type="numeric" required="false"/>
+	</setting>
+
+	<setting propertyKey="@Properties.lon" title="@Strings.Longitude">
+		<settingConfig type="numeric" required="false"/>
+	</setting>		-->	
+</settings>

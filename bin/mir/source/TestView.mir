@@ -1,0 +1,1631 @@
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 1; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 2; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 3; ]
+using Toybox.System as :Sys;
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 4; ]
+using Toybox.Lang as :Lang;
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 6; ]
+using Toybox.Time.Gregorian as :Date;
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 7; ]
+using Toybox.Application.Storage;
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 9; ]
+using Toybox.ActivityMonitor as :Mon;
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 11; ]
+using Toybox.Background;
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 13; @position = 4; ]
+var _animationInProg = false;
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 14; @position = 4; ]
+var _animation = null;
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 16; ]
+class TestView extends Ui.WatchFace{
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 16; ]
+    <init> {
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 16; ]
+    static
+    <init> {
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 18; @position = 5; ]
+    var inLowPower = true;
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 20; @position = 5; ]
+    var _playing = false;
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 22; @position = 5; ]
+    var clockTime;
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 23; @position = 5; ]
+    var hour;
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 28; @position = 5; ]
+    var background;
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 29; @position = 5; ]
+    var time_info;
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 31; @position = 5; ]
+    var img_steps;
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 32; @position = 5; ]
+    var img_heart;
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 33; @position = 5; ]
+    var img_battery;
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 34; @position = 5; ]
+    var img_distance;
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 41; @position = 5; ]
+    var weatherHUD;
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 55; @position = 5; ]
+    var BG_state = -1;
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 56; @position = 5; ]
+    var bit;
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 62; ]
+    function initialize() as Void {
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_62_26_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 63 8 ]
+        %tmp.2 = getv ? :WatchFace;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 67 8 ]
+        %tmp.4 = self;
+        %tmp.5 = getv function %tmp.4 :refreshWeather;
+        invoke %tmp.4 %tmp.5();
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_62_26_stop:
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 72; ]
+    function refreshWeather() {
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_73_4_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 79 8 ]
+        [ "D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_73_4_start" "D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_73_4_stop" ]
+        %timeLastGPS.1 = local;
+        %tmp.1 = getm $.Toybox.Application.Storage;
+        %tmp.2 = getv function %tmp.1 :getValue;
+        %tmp.3 = "timestamp";
+        %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+        lputv %timeLastGPS.1 %tmp.4;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 80 8 ]
+        [ "D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_73_4_start" "D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_73_4_stop" ]
+        %dur.2 = local;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_80_18_begin:
+        %tmp.5 = getm $.Toybox.System;
+        %tmp.6 = getv function %tmp.5 :getDeviceSettings;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        %tmp.8 = getv %tmp.7 :phoneConnected;
+        bf %tmp.8 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_80_18_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_80_18_true:
+        %tmp.9 = 900;
+        push %tmp.9;
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_80_18_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_80_18_false:
+        %tmp.10 = 3600;
+        push %tmp.10;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_80_18_end:
+        %tmp.11 = phi [%tmp.8 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_80_18_begin] [%tmp.9 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_80_18_true] [%tmp.10 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_80_18_false] [%tmp.11 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_80_18_end];
+        lputv %dur.2 %tmp.11;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 86 8 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_86_8_if_stmt:
+        %tmp.13 = lgetv %timeLastGPS.1;
+        %tmp.14 = null;
+        %tmp.15 = ne %tmp.13 %tmp.14;
+        bf %tmp.15 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_86_8_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_86_8_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_87_8_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 89 9 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_89_9_if_stmt:
+        %tmp.17 = getv ? :Time;
+        %tmp.18 = getv function %tmp.17 :now;
+        %tmp.19 = invoke %tmp.17 %tmp.18();
+        %tmp.20 = getv function %tmp.19 :value;
+        %tmp.21 = invoke %tmp.19 %tmp.20();
+        %tmp.23 = lgetv %timeLastGPS.1;
+        %tmp.24 = as %tmp.23 { (!Null) };
+        %tmp.25 = sub %tmp.21 %tmp.24;
+        %tmp.27 = lgetv %dur.2;
+        %tmp.28 = lt %tmp.25 %tmp.27;
+        bf %tmp.28 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_89_9_if_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_89_9_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_90_9_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 91 10 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_91_10_if_stmt:
+        %tmp.29 = getm $.Toybox.Application.Storage;
+        %tmp.30 = getv function %tmp.29 :getValue;
+        %tmp.31 = "temperature";
+        %tmp.32 = invoke %tmp.29 %tmp.30(%tmp.31);
+        %tmp.33 = null;
+        %tmp.34 = ne %tmp.32 %tmp.33;
+        bf %tmp.34 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_91_10_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_91_10_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_92_10_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 93 11 ]
+        %tmp.35 = getm $.Toybox.Application.Storage;
+        %tmp.36 = getv function %tmp.35 :getValue;
+        %tmp.37 = "temperature";
+        %tmp.38 = invoke %tmp.35 %tmp.36(%tmp.37);
+        putv self :app_temp %tmp.38;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 94 11 ]
+        %tmp.39 = getm $.Toybox.Application.Storage;
+        %tmp.40 = getv function %tmp.39 :getValue;
+        %tmp.41 = "feels";
+        %tmp.42 = invoke %tmp.39 %tmp.40(%tmp.41);
+        putv self :app_feels %tmp.42;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 95 11 ]
+        %tmp.43 = getm $.Toybox.Application.Storage;
+        %tmp.44 = getv function %tmp.43 :getValue;
+        %tmp.45 = "weatherCode";
+        %tmp.46 = invoke %tmp.43 %tmp.44(%tmp.45);
+        putv self :app_code %tmp.46;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 96 11 ]
+        %tmp.47 = getm $.Toybox.Application.Storage;
+        %tmp.48 = getv function %tmp.47 :getValue;
+        %tmp.49 = "humidity";
+        %tmp.50 = invoke %tmp.47 %tmp.48(%tmp.49);
+        putv self :app_humidity %tmp.50;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_92_10_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_91_10_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_91_10_if_end:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_90_9_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_89_9_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_89_9_if_false:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_100_6_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 102 4 ]
+        [ "D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_100_6_start" "D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_100_6_stop" ]
+        %lastTime.3 = local;
+        %tmp.51 = getm $.Toybox.Background;
+        %tmp.52 = getv function %tmp.51 :getLastTemporalEventTime;
+        %tmp.53 = invoke %tmp.51 %tmp.52();
+        lputv %lastTime.3 %tmp.53;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 103 4 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_103_4_if_stmt:
+        %tmp.55 = lgetv %lastTime.3;
+        %tmp.56 = null;
+        %tmp.57 = ne %tmp.55 %tmp.56;
+        bf %tmp.57 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_103_4_if_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_103_4_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_103_26_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 106 8 ]
+        %tmp.58 = getm $.Toybox.Background;
+        %tmp.59 = getv function %tmp.58 :registerForTemporalEvent;
+        %tmp.60 = lgetv %lastTime.3;
+        %tmp.61 = as %tmp.60 { (!Null) };
+        %tmp.62 = getv function %tmp.61 :add;
+        %tmp.66 = getv ? :Time;
+        %tmp.67 = getv function ? %tmp.66 :Duration;
+        %tmp.68 = 5;
+        %tmp.69 = 60;
+        %tmp.70 = mul %tmp.68 %tmp.69;
+        %tmp.63 = newc %tmp.67 (%tmp.70);
+        %tmp.71 = invoke %tmp.61 %tmp.62(%tmp.63);
+        invoke %tmp.58 %tmp.59(%tmp.71);
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_103_26_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_103_4_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_103_4_if_false:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_107_11_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 108 8 ]
+        %tmp.72 = getm $.Toybox.Background;
+        %tmp.73 = getv function %tmp.72 :registerForTemporalEvent;
+        %tmp.75 = getv ? :Time;
+        %tmp.76 = getv function %tmp.75 :now;
+        %tmp.77 = invoke %tmp.75 %tmp.76();
+        invoke %tmp.72 %tmp.73(%tmp.77);
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_107_11_stop:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_103_4_if_end:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_100_6_stop:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_89_9_if_end:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_87_8_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_86_8_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_86_8_if_end:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_73_4_stop:
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 118; ]
+    function play() {
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_118_17_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 119 5 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_119_5_if_stmt:
+        %tmp.2 = getv ? :_playing;
+        %tmp.3 = not %tmp.2;
+        bf %tmp.3 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_119_5_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_119_5_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_119_19_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 120 9 ]
+        %tmp.5 = getv ? :_animation;
+        %tmp.6 = getv function %tmp.5 :play;
+        %tmp.7 = newd 1;
+        %tmp.9 = const :delegate;
+        %tmp.13 = getv ? :DanceDanceAnimationDelegate;
+        %tmp.15 = lgetv %self;
+        %tmp.10 = newc %tmp.13 (%tmp.15);
+        %tmp.16 = dup %tmp.7;
+        %tmp.17 = aputv %tmp.16 %tmp.9 %tmp.10;
+        invoke %tmp.5 %tmp.6(%tmp.17);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 123 9 ]
+        %tmp.18 = true;
+        putv self :_playing %tmp.18;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_119_19_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_119_5_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_119_5_if_end:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_118_17_stop:
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 127; ]
+    function stop() {
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_127_17_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 128 5 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_128_5_if_stmt:
+        %tmp.2 = getv ? :_playing;
+        bf %tmp.2 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_128_5_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_128_5_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_128_18_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 129 9 ]
+        %tmp.4 = getv ? :_animation;
+        %tmp.5 = getv function %tmp.4 :stop;
+        invoke %tmp.4 %tmp.5();
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 130 9 ]
+        %tmp.6 = false;
+        putv self :_playing %tmp.6;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 131 9 ]
+        %tmp.8 = getv ? :View;
+        %tmp.9 = getv function %tmp.8 :removeLayer;
+        %tmp.11 = getv ? :_animation;
+        invoke %tmp.8 %tmp.9(%tmp.11);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 132 9 ]
+        %tmp.12 = null;
+        putv self :_animation %tmp.12;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_128_18_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_128_5_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_128_5_if_end:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_127_17_stop:
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 137; ]
+    function doAnimation() {
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_137_27_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 138 6 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_138_6_if_stmt:
+        %tmp.2 = getv ? :_animation;
+        %tmp.3 = null;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_138_6_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_138_6_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_138_31_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 140 2 ]
+        %tmp.8 = getv ? :WatchUi;
+        %tmp.9 = getv function ? %tmp.8 :AnimationLayer;
+        %tmp.11 = getv ? :Rez;
+        %tmp.12 = getv %tmp.11 :Drawables;
+        %tmp.13 = getv %tmp.12 :darkhour;
+        %tmp.14 = newd 2;
+        %tmp.16 = const :locX;
+        %tmp.17 = 0;
+        %tmp.18 = dup %tmp.14;
+        %tmp.19 = aputv %tmp.18 %tmp.16 %tmp.17;
+        %tmp.21 = const :locY;
+        %tmp.22 = 0;
+        %tmp.23 = dup %tmp.19;
+        %tmp.24 = aputv %tmp.23 %tmp.21 %tmp.22;
+        %tmp.5 = newc %tmp.9 (%tmp.13, %tmp.24);
+        putv self :_animation %tmp.5;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 148 10 ]
+        %tmp.26 = getv ? :View;
+        %tmp.27 = getv function %tmp.26 :addLayer;
+        %tmp.29 = getv ? :_animation;
+        invoke %tmp.26 %tmp.27(%tmp.29);
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_138_31_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_138_6_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_138_6_if_end:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 150 6 ]
+        %tmp.30 = self;
+        %tmp.31 = getv function %tmp.30 :play;
+        invoke %tmp.30 %tmp.31();
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_137_27_stop:
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 156; ]
+    function onLayout(dc) as Void {
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_156_34_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 157 8 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :setLayout;
+        %tmp.4 = getv ? :Rez;
+        %tmp.5 = getv %tmp.4 :Layouts;
+        %tmp.6 = getv function %tmp.5 :WatchFace;
+        %tmp.8 = lgetv %dc;
+        %tmp.9 = invoke %tmp.5 %tmp.6(%tmp.8);
+        invoke %tmp.1 %tmp.2(%tmp.9);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 159 8 ]
+        %tmp.10 = getm $.Toybox.WatchUi;
+        %tmp.11 = getv function %tmp.10 :loadResource;
+        %tmp.13 = getv ? :Rez;
+        %tmp.14 = getv %tmp.13 :Drawables;
+        %tmp.15 = getv %tmp.14 :heart;
+        %tmp.16 = invoke %tmp.10 %tmp.11(%tmp.15);
+        putv self :img_heart %tmp.16;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 160 8 ]
+        %tmp.17 = getm $.Toybox.WatchUi;
+        %tmp.18 = getv function %tmp.17 :loadResource;
+        %tmp.20 = getv ? :Rez;
+        %tmp.21 = getv %tmp.20 :Drawables;
+        %tmp.22 = getv %tmp.21 :battery;
+        %tmp.23 = invoke %tmp.17 %tmp.18(%tmp.22);
+        putv self :img_battery %tmp.23;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 161 8 ]
+        %tmp.24 = getm $.Toybox.WatchUi;
+        %tmp.25 = getv function %tmp.24 :loadResource;
+        %tmp.27 = getv ? :Rez;
+        %tmp.28 = getv %tmp.27 :Drawables;
+        %tmp.29 = getv %tmp.28 :distance;
+        %tmp.30 = invoke %tmp.24 %tmp.25(%tmp.29);
+        putv self :img_distance %tmp.30;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 162 8 ]
+        %tmp.31 = getm $.Toybox.WatchUi;
+        %tmp.32 = getv function %tmp.31 :loadResource;
+        %tmp.34 = getv ? :Rez;
+        %tmp.35 = getv %tmp.34 :Drawables;
+        %tmp.36 = getv %tmp.35 :steps;
+        %tmp.37 = invoke %tmp.31 %tmp.32(%tmp.36);
+        putv self :img_steps %tmp.37;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_156_34_stop:
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 165; ]
+    protected
+    function drawBackground(dc) {
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_166_4_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 167 5 ]
+        %tmp.1 = null;
+        putv self :bit %tmp.1;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 167 17 ]
+        %tmp.2 = null;
+        putv self :background %tmp.2;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 168 6 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_168_6_if_stmt:
+        %tmp.4 = getv ? :app_code;
+        %tmp.5 = null;
+        %tmp.6 = eq %tmp.4 %tmp.5;
+        bf %tmp.6 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_168_6_if_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_168_6_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_169_6_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 170 4 ]
+        %tmp.7 = self;
+        %tmp.8 = getv function %tmp.7 :drawBG;
+        %tmp.10 = lgetv %dc;
+        invoke %tmp.7 %tmp.8(%tmp.10);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 171 7 ]
+        %tmp.11 = null;
+        putv self :weatherHUD %tmp.11;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 172 7 ]
+        %tmp.12 = getm $.Toybox.WatchUi;
+        %tmp.13 = getv function %tmp.12 :loadResource;
+        %tmp.15 = getv ? :Rez;
+        %tmp.16 = getv %tmp.15 :Drawables;
+        %tmp.17 = getv %tmp.16 :hud_none;
+        %tmp.18 = invoke %tmp.12 %tmp.13(%tmp.17);
+        putv self :weatherHUD %tmp.18;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_169_6_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_168_6_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_168_6_if_false:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_175_6_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 178 7 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_178_7_if_stmt:
+        %tmp.20 = getv ? :app_code;
+        %tmp.21 = as %tmp.20 { (!Null) };
+        %tmp.22 = getv function %tmp.21 :equals;
+        %tmp.23 = "Rain";
+        %tmp.24 = invoke %tmp.21 %tmp.22(%tmp.23);
+        bf %tmp.24 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_178_7_if_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_178_7_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_179_7_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 184 5 ]
+        %tmp.25 = getm $.Toybox.WatchUi;
+        %tmp.26 = getv function %tmp.25 :loadResource;
+        %tmp.28 = getv ? :Rez;
+        %tmp.29 = getv %tmp.28 :Drawables;
+        %tmp.30 = getv %tmp.29 :map_rain;
+        %tmp.31 = invoke %tmp.25 %tmp.26(%tmp.30);
+        putv self :background %tmp.31;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 185 5 ]
+        %tmp.32 = getm $.Toybox.WatchUi;
+        %tmp.33 = getv function %tmp.32 :loadResource;
+        %tmp.35 = getv ? :Rez;
+        %tmp.36 = getv %tmp.35 :Drawables;
+        %tmp.37 = getv %tmp.36 :bit_rain;
+        %tmp.38 = invoke %tmp.32 %tmp.33(%tmp.37);
+        putv self :bit %tmp.38;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_179_7_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_178_7_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_178_7_if_false:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 189 12 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_189_12_if_stmt:
+        %tmp.40 = getv ? :app_code;
+        %tmp.41 = as %tmp.40 { (!Null) };
+        %tmp.42 = getv function %tmp.41 :equals;
+        %tmp.43 = "Snow";
+        %tmp.44 = invoke %tmp.41 %tmp.42(%tmp.43);
+        bf %tmp.44 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_189_12_if_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_189_12_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_190_7_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 195 5 ]
+        %tmp.45 = getm $.Toybox.WatchUi;
+        %tmp.46 = getv function %tmp.45 :loadResource;
+        %tmp.48 = getv ? :Rez;
+        %tmp.49 = getv %tmp.48 :Drawables;
+        %tmp.50 = getv %tmp.49 :map_snow;
+        %tmp.51 = invoke %tmp.45 %tmp.46(%tmp.50);
+        putv self :background %tmp.51;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 196 5 ]
+        %tmp.52 = getm $.Toybox.WatchUi;
+        %tmp.53 = getv function %tmp.52 :loadResource;
+        %tmp.55 = getv ? :Rez;
+        %tmp.56 = getv %tmp.55 :Drawables;
+        %tmp.57 = getv %tmp.56 :bit_snow;
+        %tmp.58 = invoke %tmp.52 %tmp.53(%tmp.57);
+        putv self :bit %tmp.58;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_190_7_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_189_12_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_189_12_if_false:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_201_7_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 203 8 ]
+        %tmp.59 = self;
+        %tmp.60 = getv function %tmp.59 :drawBG;
+        %tmp.62 = lgetv %dc;
+        invoke %tmp.59 %tmp.60(%tmp.62);
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_201_7_stop:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_189_12_if_end:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_178_7_if_end:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 206 8 ]
+        %tmp.63 = self;
+        %tmp.64 = getv function %tmp.63 :getWeatherIcon;
+        %tmp.66 = lgetv %dc;
+        invoke %tmp.63 %tmp.64(%tmp.66);
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_175_6_stop:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_168_6_if_end:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 210 6 ]
+        %tmp.67 = lgetv %dc;
+        %tmp.68 = getv function %tmp.67 :drawBitmap;
+        %tmp.69 = 0;
+        %tmp.70 = 0;
+        %tmp.72 = getv ? :background;
+        invoke %tmp.67 %tmp.68(%tmp.69, %tmp.70, %tmp.72);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 211 6 ]
+        %tmp.73 = lgetv %dc;
+        %tmp.74 = getv function %tmp.73 :drawBitmap;
+        %tmp.75 = 116;
+        %tmp.76 = -2;
+        %tmp.78 = getv ? :weatherHUD;
+        invoke %tmp.73 %tmp.74(%tmp.75, %tmp.76, %tmp.78);
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_166_4_stop:
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 215; ]
+    protected
+    function drawBG(dc) {
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_216_4_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 220 6 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_220_6_if_stmt:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_220_10_begin:
+        %tmp.2 = getv ? :hour;
+        %tmp.3 = 6;
+        %tmp.4 = lt %tmp.2 %tmp.3;
+        %tmp.5 = dup %tmp.4;
+        bt %tmp.5 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_220_22_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_220_22_false:
+        %tmp.7 = getv ? :hour;
+        %tmp.8 = 20;
+        %tmp.9 = gte %tmp.7 %tmp.8;
+        %tmp.10 = or %tmp.4 %tmp.9;
+        push %tmp.10;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_220_22_end:
+        %tmp.11 = phi [%tmp.5 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_220_10_begin] [%tmp.10 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_220_22_false] [%tmp.11 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_220_22_end];
+        bf %tmp.11 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_220_6_if_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_220_6_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_221_6_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 224 4 ]
+        %tmp.12 = getm $.Toybox.WatchUi;
+        %tmp.13 = getv function %tmp.12 :loadResource;
+        %tmp.15 = getv ? :Rez;
+        %tmp.16 = getv %tmp.15 :Drawables;
+        %tmp.17 = getv %tmp.16 :map_night;
+        %tmp.18 = invoke %tmp.12 %tmp.13(%tmp.17);
+        putv self :background %tmp.18;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 225 4 ]
+        %tmp.19 = getm $.Toybox.WatchUi;
+        %tmp.20 = getv function %tmp.19 :loadResource;
+        %tmp.22 = getv ? :Rez;
+        %tmp.23 = getv %tmp.22 :Drawables;
+        %tmp.24 = getv %tmp.23 :bit_night;
+        %tmp.25 = invoke %tmp.19 %tmp.20(%tmp.24);
+        putv self :bit %tmp.25;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_221_6_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_220_6_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_220_6_if_false:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 229 8 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_229_8_if_stmt:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_229_12_begin:
+        %tmp.27 = getv ? :hour;
+        %tmp.28 = 20;
+        %tmp.29 = lt %tmp.27 %tmp.28;
+        %tmp.30 = dup %tmp.29;
+        bf %tmp.30 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_229_25_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_229_25_true:
+        %tmp.32 = getv ? :hour;
+        %tmp.33 = 12;
+        %tmp.34 = gt %tmp.32 %tmp.33;
+        %tmp.35 = and %tmp.29 %tmp.34;
+        push %tmp.35;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_229_25_end:
+        %tmp.36 = phi [%tmp.30 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_229_12_begin] [%tmp.35 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_229_25_true] [%tmp.36 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_229_25_end];
+        bf %tmp.36 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_229_8_if_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_229_8_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_230_3_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 233 4 ]
+        %tmp.37 = getm $.Toybox.WatchUi;
+        %tmp.38 = getv function %tmp.37 :loadResource;
+        %tmp.40 = getv ? :Rez;
+        %tmp.41 = getv %tmp.40 :Drawables;
+        %tmp.42 = getv %tmp.41 :map_afternoon;
+        %tmp.43 = invoke %tmp.37 %tmp.38(%tmp.42);
+        putv self :background %tmp.43;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 234 4 ]
+        %tmp.44 = getm $.Toybox.WatchUi;
+        %tmp.45 = getv function %tmp.44 :loadResource;
+        %tmp.47 = getv ? :Rez;
+        %tmp.48 = getv %tmp.47 :Drawables;
+        %tmp.49 = getv %tmp.48 :bit_afternoon;
+        %tmp.50 = invoke %tmp.44 %tmp.45(%tmp.49);
+        putv self :bit %tmp.50;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_230_3_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_229_8_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_229_8_if_false:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_238_3_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 241 4 ]
+        %tmp.51 = getm $.Toybox.WatchUi;
+        %tmp.52 = getv function %tmp.51 :loadResource;
+        %tmp.54 = getv ? :Rez;
+        %tmp.55 = getv %tmp.54 :Drawables;
+        %tmp.56 = getv %tmp.55 :map_day;
+        %tmp.57 = invoke %tmp.51 %tmp.52(%tmp.56);
+        putv self :background %tmp.57;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 242 4 ]
+        %tmp.58 = getm $.Toybox.WatchUi;
+        %tmp.59 = getv function %tmp.58 :loadResource;
+        %tmp.61 = getv ? :Rez;
+        %tmp.62 = getv %tmp.61 :Drawables;
+        %tmp.63 = getv %tmp.62 :bit_day;
+        %tmp.64 = invoke %tmp.58 %tmp.59(%tmp.63);
+        putv self :bit %tmp.64;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_238_3_stop:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_229_8_if_end:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_220_6_if_end:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_216_4_stop:
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 248; ]
+    function getWeatherIcon(dc) {
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_249_4_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 250 2 ]
+        %tmp.1 = null;
+        putv self :weatherHUD %tmp.1;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 251 2 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_251_2_if_stmt:
+        %tmp.3 = getv ? :app_code;
+        %tmp.4 = null;
+        %tmp.5 = eq %tmp.3 %tmp.4;
+        bf %tmp.5 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_251_2_if_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_251_2_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_252_2_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 252 4 ]
+        %tmp.6 = getm $.Toybox.WatchUi;
+        %tmp.7 = getv function %tmp.6 :loadResource;
+        %tmp.9 = getv ? :Rez;
+        %tmp.10 = getv %tmp.9 :Drawables;
+        %tmp.11 = getv %tmp.10 :hud_none;
+        %tmp.12 = invoke %tmp.6 %tmp.7(%tmp.11);
+        putv self :weatherHUD %tmp.12;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_252_2_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_251_2_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_251_2_if_false:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 254 7 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_254_7_if_stmt:
+        %tmp.14 = getv ? :app_code;
+        %tmp.15 = as %tmp.14 { (!Null) };
+        %tmp.16 = getv function %tmp.15 :equals;
+        %tmp.17 = "Snow";
+        %tmp.18 = invoke %tmp.15 %tmp.16(%tmp.17);
+        bf %tmp.18 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_254_7_if_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_254_7_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_254_36_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 254 38 ]
+        %tmp.19 = getm $.Toybox.WatchUi;
+        %tmp.20 = getv function %tmp.19 :loadResource;
+        %tmp.22 = getv ? :Rez;
+        %tmp.23 = getv %tmp.22 :Drawables;
+        %tmp.24 = getv %tmp.23 :hud_snow;
+        %tmp.25 = invoke %tmp.19 %tmp.20(%tmp.24);
+        putv self :weatherHUD %tmp.25;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_254_36_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_254_7_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_254_7_if_false:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 255 7 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_255_7_if_stmt:
+        %tmp.27 = getv ? :app_code;
+        %tmp.28 = as %tmp.27 { (!Null) };
+        %tmp.29 = getv function %tmp.28 :equals;
+        %tmp.30 = "Sun";
+        %tmp.31 = invoke %tmp.28 %tmp.29(%tmp.30);
+        bf %tmp.31 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_255_7_if_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_255_7_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_255_35_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 255 37 ]
+        %tmp.32 = getm $.Toybox.WatchUi;
+        %tmp.33 = getv function %tmp.32 :loadResource;
+        %tmp.35 = getv ? :Rez;
+        %tmp.36 = getv %tmp.35 :Drawables;
+        %tmp.37 = getv %tmp.36 :hud_sunny;
+        %tmp.38 = invoke %tmp.32 %tmp.33(%tmp.37);
+        putv self :weatherHUD %tmp.38;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_255_35_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_255_7_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_255_7_if_false:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 256 7 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_256_7_if_stmt:
+        %tmp.40 = getv ? :app_code;
+        %tmp.41 = getv function %tmp.40 :equals;
+        %tmp.42 = "Few Clouds";
+        %tmp.43 = invoke %tmp.40 %tmp.41(%tmp.42);
+        bf %tmp.43 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_256_7_if_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_256_7_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_256_42_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 256 44 ]
+        %tmp.44 = getm $.Toybox.WatchUi;
+        %tmp.45 = getv function %tmp.44 :loadResource;
+        %tmp.47 = getv ? :Rez;
+        %tmp.48 = getv %tmp.47 :Drawables;
+        %tmp.49 = getv %tmp.48 :hud_partlycloudy;
+        %tmp.50 = invoke %tmp.44 %tmp.45(%tmp.49);
+        putv self :weatherHUD %tmp.50;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_256_42_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_256_7_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_256_7_if_false:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 257 7 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_257_7_if_stmt:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_257_11_begin:
+        %tmp.52 = getv ? :app_code;
+        %tmp.53 = getv function %tmp.52 :equals;
+        %tmp.54 = "Broken Clouds";
+        %tmp.55 = invoke %tmp.52 %tmp.53(%tmp.54);
+        %tmp.56 = dup %tmp.55;
+        bt %tmp.56 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_257_47_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_257_47_false:
+        %tmp.58 = getv ? :app_code;
+        %tmp.59 = getv function %tmp.58 :equals;
+        %tmp.60 = "Overcast Clouds";
+        %tmp.61 = invoke %tmp.58 %tmp.59(%tmp.60);
+        %tmp.62 = or %tmp.55 %tmp.61;
+        push %tmp.62;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_257_47_end:
+        %tmp.63 = phi [%tmp.56 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_257_11_begin] [%tmp.62 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_257_47_false] [%tmp.63 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_257_47_end];
+        bf %tmp.63 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_257_7_if_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_257_7_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_258_2_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 258 4 ]
+        %tmp.64 = getm $.Toybox.WatchUi;
+        %tmp.65 = getv function %tmp.64 :loadResource;
+        %tmp.67 = getv ? :Rez;
+        %tmp.68 = getv %tmp.67 :Drawables;
+        %tmp.69 = getv %tmp.68 :hud_cloudy;
+        %tmp.70 = invoke %tmp.64 %tmp.65(%tmp.69);
+        putv self :weatherHUD %tmp.70;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_258_2_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_257_7_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_257_7_if_false:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 260 7 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_260_7_if_stmt:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_260_11_begin:
+        %tmp.72 = getv ? :app_code;
+        %tmp.73 = getv function %tmp.72 :equals;
+        %tmp.74 = "Rain";
+        %tmp.75 = invoke %tmp.72 %tmp.73(%tmp.74);
+        %tmp.76 = dup %tmp.75;
+        bt %tmp.76 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_260_38_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_260_38_false:
+        %tmp.78 = getv ? :app_code;
+        %tmp.79 = getv function %tmp.78 :equals;
+        %tmp.80 = "Shower Rain";
+        %tmp.81 = invoke %tmp.78 %tmp.79(%tmp.80);
+        %tmp.82 = or %tmp.75 %tmp.81;
+        push %tmp.82;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_260_38_end:
+        %tmp.83 = phi [%tmp.76 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_260_11_begin] [%tmp.82 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_260_38_false] [%tmp.83 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_260_38_end];
+        bf %tmp.83 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_260_7_if_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_260_7_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_261_2_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 261 4 ]
+        %tmp.84 = getm $.Toybox.WatchUi;
+        %tmp.85 = getv function %tmp.84 :loadResource;
+        %tmp.87 = getv ? :Rez;
+        %tmp.88 = getv %tmp.87 :Drawables;
+        %tmp.89 = getv %tmp.88 :hud_rain;
+        %tmp.90 = invoke %tmp.84 %tmp.85(%tmp.89);
+        putv self :weatherHUD %tmp.90;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_261_2_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_260_7_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_260_7_if_false:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 263 7 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_263_7_if_stmt:
+        %tmp.92 = getv ? :app_code;
+        %tmp.93 = getv function %tmp.92 :equals;
+        %tmp.94 = "Thunderstorm";
+        %tmp.95 = invoke %tmp.92 %tmp.93(%tmp.94);
+        bf %tmp.95 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_263_7_if_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_263_7_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_263_44_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 263 46 ]
+        %tmp.96 = getm $.Toybox.WatchUi;
+        %tmp.97 = getv function %tmp.96 :loadResource;
+        %tmp.99 = getv ? :Rez;
+        %tmp.100 = getv %tmp.99 :Drawables;
+        %tmp.101 = getv %tmp.100 :hud_thunder;
+        %tmp.102 = invoke %tmp.96 %tmp.97(%tmp.101);
+        putv self :weatherHUD %tmp.102;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_263_44_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_263_7_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_263_7_if_false:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 264 7 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_264_7_if_stmt:
+        %tmp.104 = getv ? :app_code;
+        %tmp.105 = getv function %tmp.104 :equals;
+        %tmp.106 = "Fog";
+        %tmp.107 = invoke %tmp.104 %tmp.105(%tmp.106);
+        bf %tmp.107 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_264_7_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_264_7_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_264_35_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 264 37 ]
+        %tmp.108 = getm $.Toybox.WatchUi;
+        %tmp.109 = getv function %tmp.108 :loadResource;
+        %tmp.111 = getv ? :Rez;
+        %tmp.112 = getv %tmp.111 :Drawables;
+        %tmp.113 = getv %tmp.112 :hud_fog;
+        %tmp.114 = invoke %tmp.108 %tmp.109(%tmp.113);
+        putv self :weatherHUD %tmp.114;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_264_35_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_264_7_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_264_7_if_end:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_263_7_if_end:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_260_7_if_end:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_257_7_if_end:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_256_7_if_end:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_255_7_if_end:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_254_7_if_end:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_251_2_if_end:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_249_4_stop:
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 283; ]
+    function onShow() as Void {
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 287; ]
+    function onUpdate(dc) as Void {
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_287_34_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 289 4 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :clearClip;
+        invoke %tmp.1 %tmp.2();
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 291 4 ]
+        %tmp.4 = getv ? :System;
+        %tmp.5 = getv function %tmp.4 :getClockTime;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        putv self :clockTime %tmp.6;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 292 4 ]
+        %tmp.8 = getv ? :clockTime;
+        %tmp.9 = getv %tmp.8 :hour;
+        putv self :hour %tmp.9;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 293 1 ]
+        [ "D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_287_34_start" "D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_287_34_stop" ]
+        %min.1 = local;
+        %tmp.11 = getv ? :clockTime;
+        %tmp.12 = getv %tmp.11 :min;
+        lputv %min.1 %tmp.12;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 294 1 ]
+        [ "D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_287_34_start" "D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_287_34_stop" ]
+        %sec.2 = local;
+        %tmp.14 = getv ? :clockTime;
+        %tmp.15 = getv %tmp.14 :sec;
+        lputv %sec.2 %tmp.15;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 296 4 ]
+        %tmp.17 = getv ? :View;
+        %tmp.18 = getv function %tmp.17 :onUpdate;
+        %tmp.20 = lgetv %dc;
+        invoke %tmp.17 %tmp.18(%tmp.20);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 312 4 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_312_4_if_stmt:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_312_8_begin:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_312_8_begin:
+        %tmp.22 = getv ? :hour;
+        %tmp.23 = 23;
+        %tmp.24 = eq %tmp.22 %tmp.23;
+        %tmp.25 = dup %tmp.24;
+        bf %tmp.25 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_312_22_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_312_22_true:
+        %tmp.27 = lgetv %min.1;
+        %tmp.28 = 59;
+        %tmp.29 = eq %tmp.27 %tmp.28;
+        %tmp.30 = and %tmp.24 %tmp.29;
+        push %tmp.30;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_312_22_end:
+        %tmp.31 = phi [%tmp.25 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_312_8_begin] [%tmp.30 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_312_22_true] [%tmp.31 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_312_22_end];
+        %tmp.32 = dup %tmp.31;
+        bf %tmp.32 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_312_35_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_312_35_true:
+        %tmp.34 = lgetv %sec.2;
+        %tmp.35 = 54;
+        %tmp.36 = gte %tmp.34 %tmp.35;
+        %tmp.37 = and %tmp.31 %tmp.36;
+        push %tmp.37;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_312_35_end:
+        %tmp.38 = phi [%tmp.32 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_312_8_begin] [%tmp.37 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_312_35_true] [%tmp.38 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_312_35_end];
+        bf %tmp.38 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_312_4_if_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_312_4_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_313_4_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 320 9 ]
+        %tmp.39 = null;
+        putv self :background %tmp.39;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 321 9 ]
+        %tmp.40 = null;
+        putv self :weatherHUD %tmp.40;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 322 9 ]
+        %tmp.41 = null;
+        putv self :time_info %tmp.41;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 328 9 ]
+        %tmp.42 = 5;
+        putv self :BG_state %tmp.42;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 334 4 ]
+        %tmp.43 = true;
+        putv self :_animationInProg %tmp.43;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 335 10 ]
+        %tmp.44 = self;
+        %tmp.45 = getv function %tmp.44 :doAnimation;
+        invoke %tmp.44 %tmp.45();
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_313_4_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_312_4_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_312_4_if_false:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 348 9 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_348_9_if_stmt:
+        %tmp.47 = getv ? :_animationInProg;
+        %tmp.48 = false;
+        %tmp.49 = eq %tmp.47 %tmp.48;
+        bf %tmp.49 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_348_9_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_348_9_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_349_4_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 350 2 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_350_2_if_stmt:
+        %tmp.51 = getv ? :BG_state;
+        %tmp.52 = 5;
+        %tmp.53 = eq %tmp.51 %tmp.52;
+        bf %tmp.53 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_350_2_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_350_2_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_351_2_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 352 4 ]
+        %tmp.54 = null;
+        putv self :_animation %tmp.54;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 354 9 ]
+        %tmp.55 = 6;
+        putv self :BG_state %tmp.55;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 356 9 ]
+        %tmp.56 = self;
+        %tmp.57 = getv function %tmp.56 :getWeatherIcon;
+        %tmp.59 = lgetv %dc;
+        invoke %tmp.56 %tmp.57(%tmp.59);
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_351_2_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_350_2_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_350_2_if_end:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 363 8 ]
+        %tmp.60 = self;
+        %tmp.61 = getv function %tmp.60 :drawBackground;
+        %tmp.63 = lgetv %dc;
+        invoke %tmp.60 %tmp.61(%tmp.63);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 365 8 ]
+        %tmp.64 = lgetv %dc;
+        %tmp.65 = getv function %tmp.64 :setColor;
+        %tmp.66 = 0xFFFFFF;
+        %tmp.67 = -1;
+        invoke %tmp.64 %tmp.65(%tmp.66, %tmp.67);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 369 2 ]
+        %tmp.68 = lgetv %dc;
+        %tmp.69 = getv function %tmp.68 :drawText;
+        %tmp.70 = 100;
+        %tmp.71 = 52;
+        %tmp.72 = 14;
+        %tmp.74 = getv ? :hour;
+        %tmp.75 = getv function %tmp.74 :format;
+        %tmp.76 = "%02d";
+        %tmp.77 = invoke %tmp.74 %tmp.75(%tmp.76);
+        %tmp.78 = 1;
+        invoke %tmp.68 %tmp.69(%tmp.70, %tmp.71, %tmp.72, %tmp.77, %tmp.78);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 370 8 ]
+        %tmp.79 = lgetv %dc;
+        %tmp.80 = getv function %tmp.79 :drawText;
+        %tmp.81 = 128;
+        %tmp.82 = 76;
+        %tmp.83 = 14;
+        %tmp.84 = lgetv %min.1;
+        %tmp.85 = getv function %tmp.84 :format;
+        %tmp.86 = "%02d";
+        %tmp.87 = invoke %tmp.84 %tmp.85(%tmp.86);
+        %tmp.88 = 1;
+        invoke %tmp.79 %tmp.80(%tmp.81, %tmp.82, %tmp.83, %tmp.87, %tmp.88);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 384 8 ]
+        [ "D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_349_4_start" "D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_349_4_stop" ]
+        %day_xpos.3 = local;
+        %tmp.89 = 92;
+        lputv %day_xpos.3 %tmp.89;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 395 8 ]
+        %tmp.90 = null;
+        putv self :time_info %tmp.90;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 398 2 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_398_2_if_stmt:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_398_6_begin:
+        %tmp.92 = getv ? :hour;
+        %tmp.93 = 6;
+        %tmp.94 = gte %tmp.92 %tmp.93;
+        %tmp.95 = dup %tmp.94;
+        bf %tmp.95 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_398_19_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_398_19_true:
+        %tmp.97 = getv ? :hour;
+        %tmp.98 = 8;
+        %tmp.99 = lte %tmp.97 %tmp.98;
+        %tmp.100 = and %tmp.94 %tmp.99;
+        push %tmp.100;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_398_19_end:
+        %tmp.101 = phi [%tmp.95 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_398_6_begin] [%tmp.100 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_398_19_true] [%tmp.101 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_398_19_end];
+        bf %tmp.101 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_398_2_if_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_398_2_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_399_2_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 399 4 ]
+        %tmp.102 = getm $.Toybox.WatchUi;
+        %tmp.103 = getv function %tmp.102 :loadResource;
+        %tmp.105 = getv ? :Rez;
+        %tmp.106 = getv %tmp.105 :Drawables;
+        %tmp.107 = getv %tmp.106 :time_earlymorning;
+        %tmp.108 = invoke %tmp.102 %tmp.103(%tmp.107);
+        putv self :time_info %tmp.108;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 399 66 ]
+        %tmp.109 = 79;
+        lputv %day_xpos.3 %tmp.109;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_399_2_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_398_2_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_398_2_if_false:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 401 7 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_401_7_if_stmt:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_401_11_begin:
+        %tmp.111 = getv ? :hour;
+        %tmp.112 = 8;
+        %tmp.113 = gte %tmp.111 %tmp.112;
+        %tmp.114 = dup %tmp.113;
+        bf %tmp.114 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_401_24_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_401_24_true:
+        %tmp.116 = getv ? :hour;
+        %tmp.117 = 11;
+        %tmp.118 = lte %tmp.116 %tmp.117;
+        %tmp.119 = and %tmp.113 %tmp.118;
+        push %tmp.119;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_401_24_end:
+        %tmp.120 = phi [%tmp.114 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_401_11_begin] [%tmp.119 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_401_24_true] [%tmp.120 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_401_24_end];
+        bf %tmp.120 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_401_7_if_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_401_7_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_402_2_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 402 4 ]
+        %tmp.121 = getm $.Toybox.WatchUi;
+        %tmp.122 = getv function %tmp.121 :loadResource;
+        %tmp.124 = getv ? :Rez;
+        %tmp.125 = getv %tmp.124 :Drawables;
+        %tmp.126 = getv %tmp.125 :time_morning;
+        %tmp.127 = invoke %tmp.121 %tmp.122(%tmp.126);
+        putv self :time_info %tmp.127;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 402 61 ]
+        %tmp.128 = 90;
+        lputv %day_xpos.3 %tmp.128;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_402_2_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_401_7_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_401_7_if_false:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 404 7 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_404_7_if_stmt:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_404_11_begin:
+        %tmp.130 = getv ? :hour;
+        %tmp.131 = 12;
+        %tmp.132 = gte %tmp.130 %tmp.131;
+        %tmp.133 = dup %tmp.132;
+        bf %tmp.133 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_404_25_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_404_25_true:
+        %tmp.135 = getv ? :hour;
+        %tmp.136 = 16;
+        %tmp.137 = lte %tmp.135 %tmp.136;
+        %tmp.138 = and %tmp.132 %tmp.137;
+        push %tmp.138;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_404_25_end:
+        %tmp.139 = phi [%tmp.133 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_404_11_begin] [%tmp.138 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_404_25_true] [%tmp.139 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_404_25_end];
+        bf %tmp.139 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_404_7_if_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_404_7_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_405_2_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 405 4 ]
+        %tmp.140 = getm $.Toybox.WatchUi;
+        %tmp.141 = getv function %tmp.140 :loadResource;
+        %tmp.143 = getv ? :Rez;
+        %tmp.144 = getv %tmp.143 :Drawables;
+        %tmp.145 = getv %tmp.144 :time_afternoon;
+        %tmp.146 = invoke %tmp.140 %tmp.141(%tmp.145);
+        putv self :time_info %tmp.146;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 405 63 ]
+        %tmp.147 = 88;
+        lputv %day_xpos.3 %tmp.147;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_405_2_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_404_7_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_404_7_if_false:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 407 7 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_407_7_if_stmt:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_407_11_begin:
+        %tmp.149 = getv ? :hour;
+        %tmp.150 = 17;
+        %tmp.151 = gte %tmp.149 %tmp.150;
+        %tmp.152 = dup %tmp.151;
+        bf %tmp.152 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_407_25_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_407_25_true:
+        %tmp.154 = getv ? :hour;
+        %tmp.155 = 19;
+        %tmp.156 = lte %tmp.154 %tmp.155;
+        %tmp.157 = and %tmp.151 %tmp.156;
+        push %tmp.157;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_407_25_end:
+        %tmp.158 = phi [%tmp.152 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_407_11_begin] [%tmp.157 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_407_25_true] [%tmp.158 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_407_25_end];
+        bf %tmp.158 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_407_7_if_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_407_7_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_408_2_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 408 4 ]
+        %tmp.159 = getm $.Toybox.WatchUi;
+        %tmp.160 = getv function %tmp.159 :loadResource;
+        %tmp.162 = getv ? :Rez;
+        %tmp.163 = getv %tmp.162 :Drawables;
+        %tmp.164 = getv %tmp.163 :time_evening;
+        %tmp.165 = invoke %tmp.159 %tmp.160(%tmp.164);
+        putv self :time_info %tmp.165;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 408 61 ]
+        %tmp.166 = 92;
+        lputv %day_xpos.3 %tmp.166;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_408_2_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_407_7_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_407_7_if_false:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 410 7 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_410_7_if_stmt:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_410_11_begin:
+        %tmp.168 = getv ? :hour;
+        %tmp.169 = 20;
+        %tmp.170 = gte %tmp.168 %tmp.169;
+        %tmp.171 = dup %tmp.170;
+        bf %tmp.171 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_410_25_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_410_25_true:
+        %tmp.173 = getv ? :hour;
+        %tmp.174 = 23;
+        %tmp.175 = lte %tmp.173 %tmp.174;
+        %tmp.176 = and %tmp.170 %tmp.175;
+        push %tmp.176;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_410_25_end:
+        %tmp.177 = phi [%tmp.171 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_410_11_begin] [%tmp.176 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_410_25_true] [%tmp.177 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_410_25_end];
+        bf %tmp.177 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_410_7_if_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_410_7_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_411_2_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 411 4 ]
+        %tmp.178 = getm $.Toybox.WatchUi;
+        %tmp.179 = getv function %tmp.178 :loadResource;
+        %tmp.181 = getv ? :Rez;
+        %tmp.182 = getv %tmp.181 :Drawables;
+        %tmp.183 = getv %tmp.182 :time_night;
+        %tmp.184 = invoke %tmp.178 %tmp.179(%tmp.183);
+        putv self :time_info %tmp.184;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 411 59 ]
+        %tmp.185 = 90;
+        lputv %day_xpos.3 %tmp.185;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_411_2_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_410_7_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_410_7_if_false:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_414_2_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 414 4 ]
+        %tmp.186 = getm $.Toybox.WatchUi;
+        %tmp.187 = getv function %tmp.186 :loadResource;
+        %tmp.189 = getv ? :Rez;
+        %tmp.190 = getv %tmp.189 :Drawables;
+        %tmp.191 = getv %tmp.190 :time_latenight;
+        %tmp.192 = invoke %tmp.186 %tmp.187(%tmp.191);
+        putv self :time_info %tmp.192;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 414 63 ]
+        %tmp.193 = 89;
+        lputv %day_xpos.3 %tmp.193;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_414_2_stop:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_410_7_if_end:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_407_7_if_end:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_404_7_if_end:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_401_7_if_end:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_398_2_if_end:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 416 5 ]
+        %tmp.194 = lgetv %dc;
+        %tmp.195 = getv function %tmp.194 :drawBitmap;
+        %tmp.197 = lgetv %day_xpos.3;
+        %tmp.198 = 29;
+        %tmp.200 = getv ? :time_info;
+        invoke %tmp.194 %tmp.195(%tmp.197, %tmp.198, %tmp.200);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 418 8 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_418_8_if_stmt:
+        %tmp.202 = getv ? :app_temp;
+        %tmp.203 = null;
+        %tmp.204 = ne %tmp.202 %tmp.203;
+        bf %tmp.204 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_418_8_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_418_8_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_419_8_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 420 9 ]
+        %tmp.205 = lgetv %dc;
+        %tmp.206 = getv function %tmp.205 :drawText;
+        %tmp.207 = 235;
+        %tmp.208 = 106;
+        %tmp.209 = 0;
+        %tmp.211 = getv ? :app_temp;
+        %tmp.212 = as %tmp.211 { (!Null) };
+        %tmp.213 = getv function %tmp.212 :format;
+        %tmp.214 = "%d";
+        %tmp.215 = invoke %tmp.212 %tmp.213(%tmp.214);
+        %tmp.216 = "/";
+        %tmp.217 = add %tmp.215 %tmp.216;
+        %tmp.219 = getv ? :app_feels;
+        %tmp.220 = getv function %tmp.219 :format;
+        %tmp.221 = "%d";
+        %tmp.222 = invoke %tmp.219 %tmp.220(%tmp.221);
+        %tmp.223 = add %tmp.217 %tmp.222;
+        %tmp.225 = getv ? :StringUtil;
+        %tmp.226 = getv function %tmp.225 :utf8ArrayToString;
+        %tmp.227 = newa 2;
+        %tmp.228 = 0xC2;
+        %tmp.229 = dup %tmp.227;
+        %tmp.230 = aputv %tmp.229 0 %tmp.228;
+        %tmp.231 = 0xB0;
+        %tmp.232 = dup %tmp.230;
+        %tmp.233 = aputv %tmp.232 1 %tmp.231;
+        %tmp.234 = invoke %tmp.225 %tmp.226(%tmp.233);
+        %tmp.235 = add %tmp.223 %tmp.234;
+        %tmp.236 = 0;
+        invoke %tmp.205 %tmp.206(%tmp.207, %tmp.208, %tmp.209, %tmp.235, %tmp.236);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 423 9 ]
+        %tmp.237 = lgetv %dc;
+        %tmp.238 = getv function %tmp.237 :drawText;
+        %tmp.239 = 236;
+        %tmp.240 = 126;
+        %tmp.241 = 0;
+        %tmp.243 = getv ? :app_humidity;
+        %tmp.244 = getv function %tmp.243 :format;
+        %tmp.245 = "%d";
+        %tmp.246 = invoke %tmp.243 %tmp.244(%tmp.245);
+        %tmp.247 = "%";
+        %tmp.248 = add %tmp.246 %tmp.247;
+        %tmp.249 = 0;
+        invoke %tmp.237 %tmp.238(%tmp.239, %tmp.240, %tmp.241, %tmp.248, %tmp.249);
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_419_8_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_418_8_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_418_8_if_end:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 426 5 ]
+        [ "D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_349_4_start" "D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_349_4_stop" ]
+        %now.4 = local;
+        %tmp.251 = getv ? :Time;
+        %tmp.252 = getv function %tmp.251 :now;
+        %tmp.253 = invoke %tmp.251 %tmp.252();
+        lputv %now.4 %tmp.253;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 429 2 ]
+        [ "D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_349_4_start" "D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_349_4_stop" ]
+        %date.5 = local;
+        %tmp.254 = getm $.Toybox.Time.Gregorian;
+        %tmp.255 = getv function %tmp.254 :info;
+        %tmp.257 = lgetv %now.4;
+        %tmp.259 = getv ? :Time;
+        %tmp.260 = getv %tmp.259 :FORMAT_MEDIUM;
+        %tmp.261 = invoke %tmp.254 %tmp.255(%tmp.257, %tmp.260);
+        lputv %date.5 %tmp.261;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 448 2 ]
+        %tmp.262 = lgetv %dc;
+        %tmp.263 = getv function %tmp.262 :setColor;
+        %tmp.264 = 0x000000;
+        %tmp.265 = -1;
+        invoke %tmp.262 %tmp.263(%tmp.264, %tmp.265);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 449 2 ]
+        %tmp.266 = lgetv %dc;
+        %tmp.267 = getv function %tmp.266 :fillRoundedRectangle;
+        %tmp.268 = 88;
+        %tmp.269 = 6;
+        %tmp.270 = 105;
+        %tmp.271 = 23;
+        %tmp.272 = 14;
+        invoke %tmp.266 %tmp.267(%tmp.268, %tmp.269, %tmp.270, %tmp.271, %tmp.272);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 457 2 ]
+        %tmp.273 = lgetv %dc;
+        %tmp.274 = getv function %tmp.273 :setColor;
+        %tmp.275 = 0xFFFFFF;
+        %tmp.276 = -1;
+        invoke %tmp.273 %tmp.274(%tmp.275, %tmp.276);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 458 8 ]
+        %tmp.277 = lgetv %dc;
+        %tmp.278 = getv function %tmp.277 :drawText;
+        %tmp.279 = 92;
+        %tmp.280 = 3;
+        %tmp.281 = 1;
+        %tmp.282 = lgetv %date.5;
+        %tmp.283 = getv %tmp.282 :day;
+        %tmp.284 = getv function %tmp.283 :format;
+        %tmp.285 = "%02d";
+        %tmp.286 = invoke %tmp.283 %tmp.284(%tmp.285);
+        %tmp.287 = "/";
+        %tmp.288 = add %tmp.286 %tmp.287;
+        %tmp.289 = getm $.Toybox.Time.Gregorian;
+        %tmp.290 = getv function %tmp.289 :info;
+        %tmp.292 = lgetv %now.4;
+        %tmp.294 = getv ? :Time;
+        %tmp.295 = getv %tmp.294 :FORMAT_SHORT;
+        %tmp.296 = invoke %tmp.289 %tmp.290(%tmp.292, %tmp.295);
+        %tmp.297 = getv %tmp.296 :month;
+        %tmp.298 = getv function %tmp.297 :format;
+        %tmp.299 = "%02d";
+        %tmp.300 = invoke %tmp.297 %tmp.298(%tmp.299);
+        %tmp.301 = add %tmp.288 %tmp.300;
+        %tmp.302 = " ";
+        %tmp.303 = add %tmp.301 %tmp.302;
+        %tmp.304 = lgetv %date.5;
+        %tmp.305 = getv %tmp.304 :day_of_week;
+        %tmp.306 = add %tmp.303 %tmp.305;
+        %tmp.307 = 2;
+        invoke %tmp.277 %tmp.278(%tmp.279, %tmp.280, %tmp.281, %tmp.306, %tmp.307);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 462 5 ]
+        %tmp.308 = 60;
+        lputv %day_xpos.3 %tmp.308;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 464 5 ]
+        %tmp.310 = getv ? :System;
+        %tmp.311 = getv function %tmp.310 :getSystemStats;
+        %tmp.312 = invoke %tmp.310 %tmp.311();
+        %tmp.313 = getv %tmp.312 :battery;
+        lputv %date.5 %tmp.313;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 466 5 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_466_5_if_stmt:
+        %tmp.315 = lgetv %date.5;
+        %tmp.316 = 99.9;
+        %tmp.317 = gt %tmp.315 %tmp.316;
+        bf %tmp.317 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_466_5_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_466_5_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_466_22_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 466 24 ]
+        %tmp.318 = 55;
+        lputv %day_xpos.3 %tmp.318;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_466_22_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_466_5_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_466_5_if_end:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 468 2 ]
+        %tmp.319 = lgetv %dc;
+        %tmp.320 = getv function %tmp.319 :drawBitmap;
+        %tmp.322 = lgetv %day_xpos.3;
+        %tmp.323 = 215;
+        %tmp.325 = getv ? :img_battery;
+        invoke %tmp.319 %tmp.320(%tmp.322, %tmp.323, %tmp.325);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 469 2 ]
+        %tmp.326 = lgetv %dc;
+        %tmp.327 = getv function %tmp.326 :drawText;
+        %tmp.329 = lgetv %day_xpos.3;
+        %tmp.330 = 17;
+        %tmp.331 = add %tmp.329 %tmp.330;
+        %tmp.332 = 210;
+        %tmp.333 = 1;
+        %tmp.334 = lgetv %date.5;
+        %tmp.335 = getv function %tmp.334 :format;
+        %tmp.336 = "%d";
+        %tmp.337 = invoke %tmp.334 %tmp.335(%tmp.336);
+        %tmp.338 = "%";
+        %tmp.339 = add %tmp.337 %tmp.338;
+        %tmp.340 = 2;
+        invoke %tmp.326 %tmp.327(%tmp.331, %tmp.332, %tmp.333, %tmp.339, %tmp.340);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 473 8 ]
+        %tmp.341 = lgetv %dc;
+        %tmp.342 = getv function %tmp.341 :drawBitmap;
+        %tmp.343 = 121;
+        %tmp.344 = 215;
+        %tmp.346 = getv ? :img_heart;
+        invoke %tmp.341 %tmp.342(%tmp.343, %tmp.344, %tmp.346);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 474 2 ]
+        %tmp.348 = getv ? :Activity;
+        %tmp.349 = getv function %tmp.348 :getActivityInfo;
+        %tmp.350 = invoke %tmp.348 %tmp.349();
+        %tmp.351 = getv %tmp.350 :currentHeartRate;
+        lputv %day_xpos.3 %tmp.351;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 475 2 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_475_2_if_stmt:
+        %tmp.353 = lgetv %day_xpos.3;
+        %tmp.354 = null;
+        %tmp.355 = eq %tmp.353 %tmp.354;
+        bf %tmp.355 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_475_2_if_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_475_2_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_476_2_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 478 3 ]
+        [ "D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_476_2_start" "D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_476_2_stop" ]
+        %HRS.6 = local;
+        %tmp.356 = getm $.Toybox.ActivityMonitor;
+        %tmp.357 = getv function %tmp.356 :getHeartRateHistory;
+        %tmp.358 = 1;
+        %tmp.359 = true;
+        %tmp.360 = invoke %tmp.356 %tmp.357(%tmp.358, %tmp.359);
+        %tmp.361 = getv function %tmp.360 :next;
+        %tmp.362 = invoke %tmp.360 %tmp.361();
+        lputv %HRS.6 %tmp.362;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 480 3 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_480_3_if_stmt:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_480_7_begin:
+        %tmp.364 = lgetv %HRS.6;
+        %tmp.365 = null;
+        %tmp.366 = ne %tmp.364 %tmp.365;
+        %tmp.367 = dup %tmp.366;
+        bf %tmp.367 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_480_22_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_480_22_true:
+        %tmp.368 = lgetv %HRS.6;
+        %tmp.369 = as %tmp.368 { (!Null) };
+        %tmp.370 = getv %tmp.369 :heartRate;
+        %tmp.371 = getm $.Toybox.ActivityMonitor;
+        %tmp.372 = getv %tmp.371 :INVALID_HR_SAMPLE;
+        %tmp.373 = ne %tmp.370 %tmp.372;
+        %tmp.374 = and %tmp.366 %tmp.373;
+        push %tmp.374;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_480_22_end:
+        %tmp.375 = phi [%tmp.367 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_480_7_begin] [%tmp.374 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_480_22_true] [%tmp.375 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_480_22_end];
+        bf %tmp.375 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_480_3_if_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_480_3_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_481_3_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 482 4 ]
+        %tmp.376 = lgetv %HRS.6;
+        %tmp.377 = as %tmp.376 { (!Null) };
+        %tmp.378 = getv %tmp.377 :heartRate;
+        lputv %day_xpos.3 %tmp.378;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_481_3_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_480_3_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_480_3_if_false:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_486_3_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 487 4 ]
+        %tmp.379 = "";
+        lputv %day_xpos.3 %tmp.379;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_486_3_stop:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_480_3_if_end:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_476_2_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_475_2_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_475_2_if_false:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_475_2_if_end:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 495 2 ]
+        %tmp.380 = lgetv %dc;
+        %tmp.381 = getv function %tmp.380 :drawText;
+        %tmp.382 = 142;
+        %tmp.383 = 209;
+        %tmp.384 = 1;
+        %tmp.386 = lgetv %day_xpos.3;
+        %tmp.387 = 2;
+        invoke %tmp.380 %tmp.381(%tmp.382, %tmp.383, %tmp.384, %tmp.386, %tmp.387);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 497 2 ]
+        %tmp.388 = self;
+        %tmp.389 = getv function %tmp.388 :setDistanceDisplay;
+        %tmp.391 = lgetv %dc;
+        invoke %tmp.388 %tmp.389(%tmp.391);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 501 5 ]
+        %tmp.392 = lgetv %dc;
+        %tmp.393 = getv function %tmp.392 :drawBitmap;
+        %tmp.394 = 121;
+        %tmp.395 = 194;
+        %tmp.397 = getv ? :img_steps;
+        invoke %tmp.392 %tmp.393(%tmp.394, %tmp.395, %tmp.397);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 502 2 ]
+        %tmp.398 = lgetv %dc;
+        %tmp.399 = getv function %tmp.398 :drawText;
+        %tmp.400 = 142;
+        %tmp.401 = 189;
+        %tmp.402 = 1;
+        %tmp.403 = getm $.Toybox.ActivityMonitor;
+        %tmp.404 = getv function %tmp.403 :getInfo;
+        %tmp.405 = invoke %tmp.403 %tmp.404();
+        %tmp.406 = getv %tmp.405 :steps;
+        %tmp.407 = 2;
+        invoke %tmp.398 %tmp.399(%tmp.400, %tmp.401, %tmp.402, %tmp.406, %tmp.407);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 509 8 ]
+        %tmp.408 = self;
+        %tmp.409 = getv function %tmp.408 :doTime;
+        %tmp.411 = lgetv %dc;
+        %tmp.412 = lgetv %sec.2;
+        %tmp.413 = getv function %tmp.412 :format;
+        %tmp.414 = "%02d";
+        %tmp.415 = invoke %tmp.412 %tmp.413(%tmp.414);
+        invoke %tmp.408 %tmp.409(%tmp.411, %tmp.415);
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_349_4_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_348_9_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_348_9_if_end:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_312_4_if_end:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_287_34_stop:
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 514; ]
+    protected
+    function setDistanceDisplay(dc) {
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_515_4_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 517 5 ]
+        [ "D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_515_4_start" "D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_515_4_stop" ]
+        %xpos.1 = local;
+        %tmp.1 = 55;
+        lputv %xpos.1 %tmp.1;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 523 8 ]
+        [ "D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_515_4_start" "D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_515_4_stop" ]
+        %dist.2 = local;
+        %tmp.2 = getm $.Toybox.ActivityMonitor;
+        %tmp.3 = getv function %tmp.2 :getInfo;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        %tmp.5 = getv %tmp.4 :distance;
+        %tmp.6 = getv function %tmp.5 :toFloat;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        %tmp.8 = 1000;
+        %tmp.9 = 100;
+        %tmp.10 = mul %tmp.8 %tmp.9;
+        %tmp.11 = div %tmp.7 %tmp.10;
+        lputv %dist.2 %tmp.11;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 525 8 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_525_8_if_stmt:
+        %tmp.13 = lgetv %dist.2;
+        %tmp.14 = 9.99;
+        %tmp.15 = gt %tmp.13 %tmp.14;
+        bf %tmp.15 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_525_8_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_525_8_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_526_8_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 526 10 ]
+        %tmp.16 = 43;
+        lputv %xpos.1 %tmp.16;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_526_8_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_525_8_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_525_8_if_end:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 530 8 ]
+        %tmp.17 = lgetv %dc;
+        %tmp.18 = getv function %tmp.17 :drawBitmap;
+        %tmp.20 = lgetv %xpos.1;
+        %tmp.21 = 194;
+        %tmp.23 = getv ? :img_distance;
+        invoke %tmp.17 %tmp.18(%tmp.20, %tmp.21, %tmp.23);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 532 8 ]
+        %tmp.24 = lgetv %dc;
+        %tmp.25 = getv function %tmp.24 :drawText;
+        %tmp.27 = lgetv %xpos.1;
+        %tmp.28 = 20;
+        %tmp.29 = add %tmp.27 %tmp.28;
+        %tmp.30 = 189;
+        %tmp.31 = 1;
+        %tmp.32 = lgetv %dist.2;
+        %tmp.33 = getv function %tmp.32 :format;
+        %tmp.34 = "%.2f";
+        %tmp.35 = invoke %tmp.32 %tmp.33(%tmp.34);
+        %tmp.36 = 2;
+        invoke %tmp.24 %tmp.25(%tmp.29, %tmp.30, %tmp.31, %tmp.35, %tmp.36);
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_515_4_stop:
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 535; ]
+    function doTime(dc, time) {
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_536_4_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 537 5 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :setClip;
+        %tmp.3 = 143;
+        %tmp.4 = 98;
+        %tmp.5 = 22;
+        %tmp.6 = 20;
+        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.4, %tmp.5, %tmp.6);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 541 4 ]
+        %tmp.7 = lgetv %dc;
+        %tmp.8 = getv function %tmp.7 :drawBitmap;
+        %tmp.9 = 143;
+        %tmp.10 = 98;
+        %tmp.12 = getv ? :bit;
+        invoke %tmp.7 %tmp.8(%tmp.9, %tmp.10, %tmp.12);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 543 4 ]
+        %tmp.13 = lgetv %dc;
+        %tmp.14 = getv function %tmp.13 :setColor;
+        %tmp.15 = 0xFFFFFF;
+        %tmp.16 = -1;
+        invoke %tmp.13 %tmp.14(%tmp.15, %tmp.16);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 544 4 ]
+        %tmp.17 = lgetv %dc;
+        %tmp.18 = getv function %tmp.17 :drawText;
+        %tmp.19 = 143;
+        %tmp.20 = 93;
+        %tmp.21 = 0;
+        %tmp.23 = lgetv %time;
+        %tmp.24 = 2;
+        invoke %tmp.17 %tmp.18(%tmp.19, %tmp.20, %tmp.21, %tmp.23, %tmp.24);
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_536_4_stop:
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 547; ]
+    function onPartialUpdate(dc) {
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_548_4_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 551 8 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :doTime;
+        %tmp.4 = lgetv %dc;
+        %tmp.5 = getm $.Toybox.System;
+        %tmp.6 = getv function %tmp.5 :getClockTime;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        %tmp.8 = getv %tmp.7 :sec;
+        %tmp.9 = getv function %tmp.8 :format;
+        %tmp.10 = "%02d";
+        %tmp.11 = invoke %tmp.8 %tmp.9(%tmp.10);
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.11);
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_548_4_stop:
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 558; ]
+    function onHide() as Void {
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 562; ]
+    function onExitSleep() as Void {
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_562_35_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 563 5 ]
+        %tmp.1 = false;
+        putv self :inLowPower %tmp.1;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 564 5 ]
+        %tmp.2 = self;
+        %tmp.3 = getv function %tmp.2 :refreshWeather;
+        invoke %tmp.2 %tmp.3();
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_562_35_stop:
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 568; ]
+    function onEnterSleep() as Void {
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_568_36_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 569 5 ]
+        %tmp.1 = true;
+        putv self :inLowPower %tmp.1;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_568_36_stop:
+    }
+}
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 577; ]
+class DanceDanceAnimationDelegate extends Ui.AnimationDelegate{
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 577; ]
+    <init> {
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 577; ]
+    static
+    <init> {
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 578; @position = 8; ]
+    var _controller;
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 580; ]
+    function initialize(controller) as Void {
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_580_36_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 581 8 ]
+        %tmp.2 = getv ? :AnimationDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 582 8 ]
+        %tmp.5 = lgetv %controller;
+        putv self :_controller %tmp.5;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_580_36_stop:
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 586; ]
+    function onAnimationEvent(event, options) {
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_586_46_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 587 8 ]
+        %tmp.2 = lgetv %event;
+        push %tmp.2;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_587_8_switchStmtBegin:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 588 12 ]
+        %tmp.3 = dup %tmp.2;
+        %tmp.5 = getv ? :WatchUi;
+        %tmp.6 = getv %tmp.5 :ANIMATION_EVENT_COMPLETE;
+        %tmp.7 = getv function %tmp.3 :equals;
+        %tmp.8 = invoke %tmp.3 %tmp.7 (%tmp.6);
+        bt %tmp.8 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_588_12_switchCase;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 590 12 ]
+        %tmp.9 = dup %tmp.2;
+        %tmp.11 = getv ? :WatchUi;
+        %tmp.12 = getv %tmp.11 :ANIMATION_EVENT_CANCELED;
+        %tmp.13 = getv function %tmp.9 :equals;
+        %tmp.14 = invoke %tmp.9 %tmp.13 (%tmp.12);
+        bt %tmp.14 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_590_12_switchCase;
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_587_8_defaultCodeBegin;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_588_12_switchCase:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 589 13 ]
+        %tmp.15 = false;
+        putv self :_animationInProg %tmp.15;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_590_12_switchCase:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 591 16 ]
+        %tmp.17 = getv ? :_controller;
+        %tmp.18 = getv function %tmp.17 :stop;
+        invoke %tmp.17 %tmp.18();
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc" 592 16 ]
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_587_8_switchStmtEnd;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_587_8_defaultCodeBegin:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_587_8_switchStmtEnd:
+        pop;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestView_mc_586_46_stop:
+    }
+}
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestView.mc"; @line = 1; ]
+<init> {
+}

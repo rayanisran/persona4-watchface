@@ -1,0 +1,319 @@
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc"; @line = 1; ]
+using Toybox.Application as :App;
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc"; @line = 2; ]
+using Toybox.Activity as :Activity;
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc"; @line = 3; ]
+using Toybox.Background;
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc"; @line = 4; ]
+using Toybox.System as :Sys;
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc"; @line = 5; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc"; @line = 6; ]
+using Toybox.Time as :Time;
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc"; @line = 19; @position = 4; ]
+var app_code;
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc"; @line = 20; @position = 4; ]
+var app_feels;
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc"; @line = 21; @position = 4; ]
+var app_temp;
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc"; @line = 22; @position = 4; ]
+var app_humidity;
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc"; @line = 24; background = true; ]
+class TestApp extends App.AppBase{
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc"; @line = 25; ]
+    <init> {
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc"; @line = 25; ]
+    static
+    <init> {
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc"; @line = 27; ]
+    function initialize() as Void {
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_27_26_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 30 8 ]
+        %tmp.2 = getv ? :AppBase;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_27_26_stop:
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc"; @line = 46; ]
+    function onStart(state) as Void {
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc"; @line = 50; ]
+    function onStop(state) {
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc"; @line = 63; ]
+    function getInitialView() {
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_63_30_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 70 6 ]
+        %tmp.1 = getm $.Toybox.Background;
+        %tmp.2 = getv function %tmp.1 :registerForTemporalEvent;
+        %tmp.5 = getm $.Toybox.Time;
+        %tmp.6 = getv function ? %tmp.5 :Duration;
+        %tmp.7 = 60;
+        %tmp.8 = 60;
+        %tmp.9 = mul %tmp.7 %tmp.8;
+        %tmp.3 = newc %tmp.6 (%tmp.9);
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 74 8 ]
+        %tmp.10 = newa 1;
+        %tmp.14 = getv ? :TestView;
+        %tmp.11 = newc %tmp.14 ();
+        %tmp.15 = dup %tmp.10;
+        %tmp.16 = aputv %tmp.15 0 %tmp.11;
+        ret %tmp.16;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_63_30_stop:
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc"; @line = 83; ]
+    function onBackgroundData(data) {
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_83_36_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 86 2 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_86_2_if_stmt:
+        %tmp.1 = getm $.Toybox.Activity;
+        %tmp.2 = getv function %tmp.1 :getActivityInfo;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = getv %tmp.3 :currentLocation;
+        %tmp.5 = null;
+        %tmp.6 = ne %tmp.4 %tmp.5;
+        bf %tmp.6 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_86_2_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_86_2_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_87_2_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 88 6 ]
+        [ "D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_87_2_start" "D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_87_2_stop" ]
+        %lat.1 = local;
+        %tmp.7 = getm $.Toybox.Activity;
+        %tmp.8 = getv function %tmp.7 :getActivityInfo;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        %tmp.10 = getv %tmp.9 :currentLocation;
+        %tmp.11 = getv function %tmp.10 :toDegrees;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        %tmp.13 = 0;
+        %tmp.14 = agetv %tmp.12 %tmp.13;
+        lputv %lat.1 %tmp.14;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 90 3 ]
+        %tmp.15 = getm $.Toybox.Application;
+        %tmp.16 = getv %tmp.15 :Storage;
+        %tmp.17 = getv function %tmp.16 :setValue;
+        %tmp.18 = "lat";
+        %tmp.20 = lgetv %lat.1;
+        invoke %tmp.16 %tmp.17(%tmp.18, %tmp.20);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 92 3 ]
+        %tmp.21 = getm $.Toybox.Activity;
+        %tmp.22 = getv function %tmp.21 :getActivityInfo;
+        %tmp.23 = invoke %tmp.21 %tmp.22();
+        %tmp.24 = getv %tmp.23 :currentLocation;
+        %tmp.25 = getv function %tmp.24 :toDegrees;
+        %tmp.26 = invoke %tmp.24 %tmp.25();
+        %tmp.27 = 1;
+        %tmp.28 = agetv %tmp.26 %tmp.27;
+        lputv %lat.1 %tmp.28;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 93 3 ]
+        %tmp.29 = getm $.Toybox.Application;
+        %tmp.30 = getv %tmp.29 :Storage;
+        %tmp.31 = getv function %tmp.30 :setValue;
+        %tmp.32 = "lon";
+        %tmp.34 = lgetv %lat.1;
+        invoke %tmp.30 %tmp.31(%tmp.32, %tmp.34);
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_87_2_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_86_2_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_86_2_if_end:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 96 5 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_96_5_if_stmt:
+        %tmp.36 = lgetv %data;
+        %tmp.37 = 400;
+        %tmp.38 = ne %tmp.36 %tmp.37;
+        bf %tmp.38 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_96_5_if_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_96_5_if_true:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_97_5_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 99 6 ]
+        %tmp.40 = lgetv %data;
+        %tmp.41 = "code";
+        %tmp.42 = agetv %tmp.40 %tmp.41;
+        putv self :app_code %tmp.42;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 100 6 ]
+        %tmp.44 = lgetv %data;
+        %tmp.45 = "temp";
+        %tmp.46 = agetv %tmp.44 %tmp.45;
+        putv self :app_temp %tmp.46;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 101 6 ]
+        %tmp.48 = lgetv %data;
+        %tmp.49 = "feels";
+        %tmp.50 = agetv %tmp.48 %tmp.49;
+        putv self :app_feels %tmp.50;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 102 6 ]
+        %tmp.52 = lgetv %data;
+        %tmp.53 = "humidity";
+        %tmp.54 = agetv %tmp.52 %tmp.53;
+        putv self :app_humidity %tmp.54;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 104 9 ]
+        %tmp.55 = getm $.Toybox.Application;
+        %tmp.56 = getv %tmp.55 :Storage;
+        %tmp.57 = getv function %tmp.56 :setValue;
+        %tmp.58 = "weatherCode";
+        %tmp.60 = getv ? :app_code;
+        invoke %tmp.56 %tmp.57(%tmp.58, %tmp.60);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 105 9 ]
+        %tmp.61 = getm $.Toybox.Application;
+        %tmp.62 = getv %tmp.61 :Storage;
+        %tmp.63 = getv function %tmp.62 :setValue;
+        %tmp.64 = "temperature";
+        %tmp.66 = getv ? :app_temp;
+        invoke %tmp.62 %tmp.63(%tmp.64, %tmp.66);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 106 9 ]
+        %tmp.67 = getm $.Toybox.Application;
+        %tmp.68 = getv %tmp.67 :Storage;
+        %tmp.69 = getv function %tmp.68 :setValue;
+        %tmp.70 = "timestamp";
+        %tmp.71 = getm $.Toybox.Time;
+        %tmp.72 = getv function %tmp.71 :now;
+        %tmp.73 = invoke %tmp.71 %tmp.72();
+        %tmp.74 = getv function %tmp.73 :value;
+        %tmp.75 = invoke %tmp.73 %tmp.74();
+        invoke %tmp.68 %tmp.69(%tmp.70, %tmp.75);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 107 9 ]
+        %tmp.76 = getm $.Toybox.Application;
+        %tmp.77 = getv %tmp.76 :Storage;
+        %tmp.78 = getv function %tmp.77 :setValue;
+        %tmp.79 = "feels";
+        %tmp.81 = getv ? :app_feels;
+        invoke %tmp.77 %tmp.78(%tmp.79, %tmp.81);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 108 9 ]
+        %tmp.82 = getm $.Toybox.Application;
+        %tmp.83 = getv %tmp.82 :Storage;
+        %tmp.84 = getv function %tmp.83 :setValue;
+        %tmp.85 = "humidity";
+        %tmp.87 = getv ? :app_humidity;
+        invoke %tmp.83 %tmp.84(%tmp.85, %tmp.87);
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 109 9 ]
+        %tmp.88 = getm $.Toybox.WatchUi;
+        %tmp.89 = getv function %tmp.88 :requestUpdate;
+        invoke %tmp.88 %tmp.89();
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_97_5_stop:
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_96_5_if_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_96_5_if_false:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_113_5_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 116 9 ]
+        [ "D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_113_5_start" "D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_113_5_stop" ]
+        %prevCode.2 = local;
+        %tmp.91 = getv ? :Storage;
+        %tmp.92 = getv function %tmp.91 :getValue;
+        %tmp.93 = "weatherCode";
+        %tmp.94 = invoke %tmp.91 %tmp.92(%tmp.93);
+        lputv %prevCode.2 %tmp.94;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 117 9 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_117_20_begin:
+        %tmp.96 = lgetv %prevCode.2;
+        %tmp.97 = null;
+        %tmp.98 = eq %tmp.96 %tmp.97;
+        bf %tmp.98 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_117_20_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_117_20_true:
+        %tmp.100 = lgetv %prevCode.2;
+        %tmp.101 = as %tmp.100 { (Null) };
+        push %tmp.101;
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_117_20_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_117_20_false:
+        %tmp.102 = null;
+        push %tmp.102;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_117_20_end:
+        %tmp.103 = phi [%tmp.98 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_117_20_begin] [%tmp.101 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_117_20_true] [%tmp.102 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_117_20_false] [%tmp.103 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_117_20_end];
+        putv self :app_code %tmp.103;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 119 9 ]
+        %tmp.105 = getv ? :Storage;
+        %tmp.106 = getv function %tmp.105 :getValue;
+        %tmp.107 = "temperature";
+        %tmp.108 = invoke %tmp.105 %tmp.106(%tmp.107);
+        lputv %prevCode.2 %tmp.108;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 120 9 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_120_20_begin:
+        %tmp.110 = lgetv %prevCode.2;
+        %tmp.111 = null;
+        %tmp.112 = eq %tmp.110 %tmp.111;
+        bf %tmp.112 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_120_20_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_120_20_true:
+        %tmp.114 = lgetv %prevCode.2;
+        %tmp.115 = as %tmp.114 { (Null) };
+        push %tmp.115;
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_120_20_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_120_20_false:
+        %tmp.116 = null;
+        push %tmp.116;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_120_20_end:
+        %tmp.117 = phi [%tmp.112 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_120_20_begin] [%tmp.115 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_120_20_true] [%tmp.116 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_120_20_false] [%tmp.117 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_120_20_end];
+        putv self :app_temp %tmp.117;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 122 9 ]
+        %tmp.119 = getv ? :Storage;
+        %tmp.120 = getv function %tmp.119 :getValue;
+        %tmp.121 = "feels";
+        %tmp.122 = invoke %tmp.119 %tmp.120(%tmp.121);
+        lputv %prevCode.2 %tmp.122;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 123 9 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_123_21_begin:
+        %tmp.124 = lgetv %prevCode.2;
+        %tmp.125 = null;
+        %tmp.126 = eq %tmp.124 %tmp.125;
+        bf %tmp.126 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_123_21_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_123_21_true:
+        %tmp.128 = lgetv %prevCode.2;
+        %tmp.129 = as %tmp.128 { (Null) };
+        push %tmp.129;
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_123_21_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_123_21_false:
+        %tmp.130 = null;
+        push %tmp.130;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_123_21_end:
+        %tmp.131 = phi [%tmp.126 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_123_21_begin] [%tmp.129 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_123_21_true] [%tmp.130 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_123_21_false] [%tmp.131 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_123_21_end];
+        putv self :app_feels %tmp.131;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 125 9 ]
+        %tmp.133 = getv ? :Storage;
+        %tmp.134 = getv function %tmp.133 :getValue;
+        %tmp.135 = "humidity";
+        %tmp.136 = invoke %tmp.133 %tmp.134(%tmp.135);
+        lputv %prevCode.2 %tmp.136;
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 126 9 ]
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_126_21_begin:
+        %tmp.138 = lgetv %prevCode.2;
+        %tmp.139 = null;
+        %tmp.140 = eq %tmp.138 %tmp.139;
+        bf %tmp.140 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_126_21_false;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_126_21_true:
+        %tmp.142 = lgetv %prevCode.2;
+        %tmp.143 = as %tmp.142 { (Null) };
+        push %tmp.143;
+        goto @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_126_21_end;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_126_21_false:
+        %tmp.144 = null;
+        push %tmp.144;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_126_21_end:
+        %tmp.145 = phi [%tmp.140 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_126_21_begin] [%tmp.143 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_126_21_true] [%tmp.144 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_126_21_false] [%tmp.145 @D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_126_21_end];
+        putv self :app_feels %tmp.145;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_113_5_stop:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_96_5_if_end:
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_83_36_stop:
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc"; @line = 130; ]
+    function getServiceDelegate() {
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_130_33_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 134 8 ]
+        %tmp.1 = newa 1;
+        %tmp.5 = getv ? :BgbgServiceDelegate;
+        %tmp.2 = newc %tmp.5 ();
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = aputv %tmp.6 0 %tmp.2;
+        ret %tmp.7;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_130_33_stop:
+    }
+}
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc"; @line = 139; ]
+function getApp() as TestApp {
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_139_29_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc" 140 4 ]
+    %tmp.2 = getv ? :Application;
+    %tmp.3 = getv function %tmp.2 :getApp;
+    %tmp.4 = invoke %tmp.2 %tmp.3();
+    %tmp.5 = as %tmp.4 TestApp;
+    ret %tmp.5;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_source_TestApp_mc_139_29_stop:
+}
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\source\TestApp.mc"; @line = 1; ]
+<init> {
+}

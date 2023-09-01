@@ -1,0 +1,7 @@
+<properties>
+	<property id="Lat_u" type="float">24.825647</property>
+	<property id="Lon_u" type="float">67.0387093</property>
+	
+	<property id="lat" type="float">0</property>
+	<property id="lon" type="float">0</property>
+</properties>

@@ -1,0 +1,67 @@
+import Toybox.Lang;
+using Toybox.WatchUi;
+using Toybox.WatchUi as Ui;
+using Toybox.Graphics;
+using Toybox.Graphics as Gfx;
+
+module Rez {
+    module Drawables {
+        (:initialized) var hud_sunny as Symbol;
+        (:initialized) var hud_partlycloudy as Symbol;
+        (:initialized) var hud_cloudy as Symbol;
+        (:initialized) var hud_rain as Symbol;
+        (:initialized) var hud_thunder as Symbol;
+        (:initialized) var hud_snow as Symbol;
+        (:initialized) var hud_fog as Symbol;
+        (:initialized) var hud_none as Symbol;
+        (:initialized) var weather_hud as Symbol;
+        (:initialized) var time_earlymorning as Symbol;
+        (:initialized) var time_morning as Symbol;
+        (:initialized) var time_afternoon as Symbol;
+        (:initialized) var time_evening as Symbol;
+        (:initialized) var time_night as Symbol;
+        (:initialized) var time_latenight as Symbol;
+        (:initialized) var time_info as Symbol;
+        (:initialized) var map_day as Symbol;
+        (:initialized) var map_afternoon as Symbol;
+        (:initialized) var map_night as Symbol;
+        (:initialized) var map_rain as Symbol;
+        (:initialized) var map_snow as Symbol;
+        (:initialized) var map as Symbol;
+        (:initialized) var bit_day as Symbol;
+        (:initialized) var bit_afternoon as Symbol;
+        (:initialized) var bit_night as Symbol;
+        (:initialized) var bit_rain as Symbol;
+        (:initialized) var bit_snow as Symbol;
+        (:initialized) var battery as Symbol;
+        (:initialized) var heart as Symbol;
+        (:initialized) var distance as Symbol;
+        (:initialized) var steps as Symbol;
+        (:initialized) var LauncherIcon as Symbol;
+        (:initialized) var darkhour as Symbol;
+        (:initialized) var dark_hour as Symbol;
+    } // Drawables
+
+    module Fonts {
+    } // Fonts
+
+    module JsonData {
+    } // JsonData
+
+    module Layouts {
+        function WatchFace(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+            return [] as Array<WatchUi.Drawable>;
+        }
+    } // Layouts
+
+    module Menus {
+    } // Menus
+
+    module Strings {
+        (:initialized) var Latitude_u as Symbol;
+        (:initialized) var Latitude as Symbol;
+        (:initialized) var Longitude_u as Symbol;
+        (:initialized) var Longitude as Symbol;
+        (:initialized) var AppName as Symbol;
+    } // Strings
+} // Rez

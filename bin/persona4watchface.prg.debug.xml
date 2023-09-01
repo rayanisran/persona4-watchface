@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="1" lineNum="25" parent="globals/TestApp" pc="268435460" symbol="&lt;init&gt;"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="2" lineNum="46" parent="globals/TestApp" pc="268435479" symbol="onStart"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="3" lineNum="130" parent="globals/TestApp" pc="268435482" symbol="getServiceDelegate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="3" lineNum="134" parent="globals/TestApp" pc="268435484" symbol="getServiceDelegate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="4" lineNum="63" parent="globals/TestApp" pc="268435525" symbol="getInitialView"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="4" lineNum="70" parent="globals/TestApp" pc="268435527" symbol="getInitialView"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="4" lineNum="74" parent="globals/TestApp" pc="268435574" symbol="getInitialView"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="5" lineNum="27" parent="globals/TestApp" pc="268435615" symbol="initialize"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="5" lineNum="30" parent="globals/TestApp" pc="268435617" symbol="initialize"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="6" lineNum="83" parent="globals/TestApp" pc="268435636" symbol="onBackgroundData"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="6" lineNum="86" parent="globals/TestApp" pc="268435640" symbol="onBackgroundData"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="6" lineNum="88" parent="globals/TestApp" pc="268435666" symbol="onBackgroundData"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="6" lineNum="90" parent="globals/TestApp" pc="268435704" symbol="onBackgroundData"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="6" lineNum="92" parent="globals/TestApp" pc="268435733" symbol="onBackgroundData"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="6" lineNum="93" parent="globals/TestApp" pc="268435771" symbol="onBackgroundData"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="6" lineNum="96" parent="globals/TestApp" pc="268435803" symbol="onBackgroundData"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="6" lineNum="99" parent="globals/TestApp" pc="268435814" symbol="onBackgroundData"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="6" lineNum="100" parent="globals/TestApp" pc="268435830" symbol="onBackgroundData"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="6" lineNum="101" parent="globals/TestApp" pc="268435846" symbol="onBackgroundData"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="6" lineNum="102" parent="globals/TestApp" pc="268435862" symbol="onBackgroundData"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="6" lineNum="104" parent="globals/TestApp" pc="268435878" symbol="onBackgroundData"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="6" lineNum="105" parent="globals/TestApp" pc="268435913" symbol="onBackgroundData"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="6" lineNum="106" parent="globals/TestApp" pc="268435948" symbol="onBackgroundData"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="6" lineNum="107" parent="globals/TestApp" pc="268435999" symbol="onBackgroundData"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="6" lineNum="108" parent="globals/TestApp" pc="268436034" symbol="onBackgroundData"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="6" lineNum="109" parent="globals/TestApp" pc="268436069" symbol="onBackgroundData"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="6" lineNum="116" parent="globals/TestApp" pc="268436088" symbol="onBackgroundData"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="6" lineNum="117" parent="globals/TestApp" pc="268436112" symbol="onBackgroundData"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="6" lineNum="119" parent="globals/TestApp" pc="268436133" symbol="onBackgroundData"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="6" lineNum="120" parent="globals/TestApp" pc="268436157" symbol="onBackgroundData"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="6" lineNum="122" parent="globals/TestApp" pc="268436178" symbol="onBackgroundData"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="6" lineNum="123" parent="globals/TestApp" pc="268436202" symbol="onBackgroundData"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="6" lineNum="125" parent="globals/TestApp" pc="268436223" symbol="onBackgroundData"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="6" lineNum="126" parent="globals/TestApp" pc="268436247" symbol="onBackgroundData"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="7" lineNum="50" parent="globals/TestApp" pc="268436269" symbol="onStop"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="8" lineNum="10" parent="globals/BgbgServiceDelegate" pc="268436272" symbol="&lt;init&gt;"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="8" lineNum="13" parent="globals/BgbgServiceDelegate" pc="268436290" symbol="&lt;init&gt;"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="8" lineNum="14" parent="globals/BgbgServiceDelegate" pc="268436318" symbol="&lt;init&gt;"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="8" lineNum="19" parent="globals/BgbgServiceDelegate" pc="268436346" symbol="&lt;init&gt;"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="8" lineNum="21" parent="globals/BgbgServiceDelegate" pc="268436360" symbol="&lt;init&gt;"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="9" lineNum="101" parent="globals/BgbgServiceDelegate" pc="268436609" symbol="receiveWeather"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="9" lineNum="104" parent="globals/BgbgServiceDelegate" pc="268436613" symbol="receiveWeather"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="9" lineNum="113" parent="globals/BgbgServiceDelegate" pc="268436624" symbol="receiveWeather"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="9" lineNum="114" parent="globals/BgbgServiceDelegate" pc="268436646" symbol="receiveWeather"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="9" lineNum="115" parent="globals/BgbgServiceDelegate" pc="268436662" symbol="receiveWeather"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="9" lineNum="116" parent="globals/BgbgServiceDelegate" pc="268436678" symbol="receiveWeather"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="9" lineNum="120" parent="globals/BgbgServiceDelegate" pc="268436694" symbol="receiveWeather"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="9" lineNum="121" parent="globals/BgbgServiceDelegate" pc="268436710" symbol="receiveWeather"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="9" lineNum="122" parent="globals/BgbgServiceDelegate" pc="268436735" symbol="receiveWeather"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="9" lineNum="123" parent="globals/BgbgServiceDelegate" pc="268436751" symbol="receiveWeather"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="9" lineNum="128" parent="globals/BgbgServiceDelegate" pc="268436767" symbol="receiveWeather"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="9" lineNum="134" parent="globals/BgbgServiceDelegate" pc="268436794" symbol="receiveWeather"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="10" lineNum="48" parent="globals/BgbgServiceDelegate" pc="268436816" symbol="onTemporalEvent"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="10" lineNum="50" parent="globals/BgbgServiceDelegate" pc="268436820" symbol="onTemporalEvent"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="10" lineNum="54" parent="globals/BgbgServiceDelegate" pc="268436841" symbol="onTemporalEvent"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="10" lineNum="58" parent="globals/BgbgServiceDelegate" pc="268436869" symbol="onTemporalEvent"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="10" lineNum="59" parent="globals/BgbgServiceDelegate" pc="268436897" symbol="onTemporalEvent"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="10" lineNum="62" parent="globals/BgbgServiceDelegate" pc="268436925" symbol="onTemporalEvent"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="10" lineNum="67" parent="globals/BgbgServiceDelegate" pc="268436942" symbol="onTemporalEvent"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="10" lineNum="68" parent="globals/BgbgServiceDelegate" pc="268436958" symbol="onTemporalEvent"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="10" lineNum="77" parent="globals/BgbgServiceDelegate" pc="268436980" symbol="onTemporalEvent"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="10" lineNum="78" parent="globals/BgbgServiceDelegate" pc="268437026" symbol="onTemporalEvent"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="10" lineNum="81" parent="globals/BgbgServiceDelegate" pc="268437072" symbol="onTemporalEvent"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="10" lineNum="82" parent="globals/BgbgServiceDelegate" pc="268437117" symbol="onTemporalEvent"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="10" lineNum="83" parent="globals/BgbgServiceDelegate" pc="268437124" symbol="onTemporalEvent"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="10" lineNum="88" parent="globals/BgbgServiceDelegate" pc="268437208" symbol="onTemporalEvent"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="10" lineNum="94" parent="globals/BgbgServiceDelegate" pc="268437269" symbol="onTemporalEvent"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="11" lineNum="43" parent="globals/BgbgServiceDelegate" pc="268437308" symbol="initialize"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\Background.mc" id="11" lineNum="44" parent="globals/BgbgServiceDelegate" pc="268437310" symbol="initialize"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="12" lineNum="139" parent="globals" pc="268437333" symbol="getApp"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestApp.mc" id="12" lineNum="140" parent="globals" pc="268437343" symbol="getApp"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\bin\\gen\\006-B2888-00\\source\\Rez.mcgen" id="13" lineNum="7" parent="globals/Rez" pc="268437361" symbol="&lt;init&gt;"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="14" lineNum="577" parent="globals/DanceDanceAnimationDelegate" pc="268437385" symbol="&lt;init&gt;"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="15" lineNum="580" parent="globals/DanceDanceAnimationDelegate" pc="268437404" symbol="initialize"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="15" lineNum="581" parent="globals/DanceDanceAnimationDelegate" pc="268437406" symbol="initialize"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="15" lineNum="582" parent="globals/DanceDanceAnimationDelegate" pc="268437424" symbol="initialize"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="16" lineNum="586" parent="globals/DanceDanceAnimationDelegate" pc="268437435" symbol="onAnimationEvent"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="16" lineNum="587" parent="globals/DanceDanceAnimationDelegate" pc="268437437" symbol="onAnimationEvent"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="16" lineNum="588" parent="globals/DanceDanceAnimationDelegate" pc="268437439" symbol="onAnimationEvent"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="16" lineNum="590" parent="globals/DanceDanceAnimationDelegate" pc="268437459" symbol="onAnimationEvent"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="16" lineNum="589" parent="globals/DanceDanceAnimationDelegate" pc="268437482" symbol="onAnimationEvent"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="16" lineNum="591" parent="globals/DanceDanceAnimationDelegate" pc="268437492" symbol="onAnimationEvent"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="16" lineNum="592" parent="globals/DanceDanceAnimationDelegate" pc="268437510" symbol="onAnimationEvent"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="17" lineNum="16" parent="globals/TestView" pc="268437515" symbol="&lt;init&gt;"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="18" lineNum="118" parent="globals/TestView" pc="268437534" symbol="play"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="18" lineNum="119" parent="globals/TestView" pc="268437536" symbol="play"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="18" lineNum="120" parent="globals/TestView" pc="268437548" symbol="play"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="18" lineNum="123" parent="globals/TestView" pc="268437608" symbol="play"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="19" lineNum="535" parent="globals/TestView" pc="268437622" symbol="doTime"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="19" lineNum="537" parent="globals/TestView" pc="268437624" symbol="doTime"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="19" lineNum="541" parent="globals/TestView" pc="268437656" symbol="doTime"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="19" lineNum="543" parent="globals/TestView" pc="268437686" symbol="doTime"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="19" lineNum="544" parent="globals/TestView" pc="268437708" symbol="doTime"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="20" lineNum="215" parent="globals/TestView" pc="268437743" symbol="drawBG"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="20" lineNum="220" parent="globals/TestView" pc="268437745" symbol="drawBG"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="20" lineNum="224" parent="globals/TestView" pc="268437782" symbol="drawBG"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="20" lineNum="225" parent="globals/TestView" pc="268437829" symbol="drawBG"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="20" lineNum="229" parent="globals/TestView" pc="268437879" symbol="drawBG"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="20" lineNum="233" parent="globals/TestView" pc="268437916" symbol="drawBG"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="20" lineNum="234" parent="globals/TestView" pc="268437963" symbol="drawBG"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="20" lineNum="241" parent="globals/TestView" pc="268438013" symbol="drawBG"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="20" lineNum="242" parent="globals/TestView" pc="268438060" symbol="drawBG"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="21" lineNum="165" parent="globals/TestView" pc="268438108" symbol="drawBackground"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="21" lineNum="167" parent="globals/TestView" pc="268438110" symbol="drawBackground"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="21" lineNum="167" parent="globals/TestView" pc="268438119" symbol="drawBackground"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="21" lineNum="168" parent="globals/TestView" pc="268438128" symbol="drawBackground"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="21" lineNum="170" parent="globals/TestView" pc="268438141" symbol="drawBackground"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="21" lineNum="171" parent="globals/TestView" pc="268438155" symbol="drawBackground"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="21" lineNum="172" parent="globals/TestView" pc="268438164" symbol="drawBackground"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="21" lineNum="178" parent="globals/TestView" pc="268438214" symbol="drawBackground"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="21" lineNum="184" parent="globals/TestView" pc="268438239" symbol="drawBackground"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="21" lineNum="185" parent="globals/TestView" pc="268438286" symbol="drawBackground"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="21" lineNum="189" parent="globals/TestView" pc="268438336" symbol="drawBackground"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="21" lineNum="195" parent="globals/TestView" pc="268438361" symbol="drawBackground"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="21" lineNum="196" parent="globals/TestView" pc="268438408" symbol="drawBackground"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="21" lineNum="203" parent="globals/TestView" pc="268438458" symbol="drawBackground"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="21" lineNum="206" parent="globals/TestView" pc="268438472" symbol="drawBackground"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="21" lineNum="210" parent="globals/TestView" pc="268438486" symbol="drawBackground"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="21" lineNum="211" parent="globals/TestView" pc="268438516" symbol="drawBackground"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="23" lineNum="562" parent="globals/TestView" pc="268438547" symbol="onExitSleep"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="23" lineNum="563" parent="globals/TestView" pc="268438549" symbol="onExitSleep"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="23" lineNum="564" parent="globals/TestView" pc="268438559" symbol="onExitSleep"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="25" lineNum="156" parent="globals/TestView" pc="268438572" symbol="onLayout"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="25" lineNum="157" parent="globals/TestView" pc="268438574" symbol="onLayout"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="25" lineNum="159" parent="globals/TestView" pc="268438615" symbol="onLayout"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="25" lineNum="160" parent="globals/TestView" pc="268438662" symbol="onLayout"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="25" lineNum="161" parent="globals/TestView" pc="268438709" symbol="onLayout"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="25" lineNum="162" parent="globals/TestView" pc="268438756" symbol="onLayout"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="26" lineNum="514" parent="globals/TestView" pc="268438804" symbol="setDistanceDisplay"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="26" lineNum="517" parent="globals/TestView" pc="268438808" symbol="setDistanceDisplay"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="26" lineNum="523" parent="globals/TestView" pc="268438815" symbol="setDistanceDisplay"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="26" lineNum="525" parent="globals/TestView" pc="268438853" symbol="setDistanceDisplay"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="26" lineNum="526" parent="globals/TestView" pc="268438864" symbol="setDistanceDisplay"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="26" lineNum="530" parent="globals/TestView" pc="268438874" symbol="setDistanceDisplay"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="26" lineNum="532" parent="globals/TestView" pc="268438901" symbol="setDistanceDisplay"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="27" lineNum="72" parent="globals/TestView" pc="268438953" symbol="refreshWeather"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="27" lineNum="79" parent="globals/TestView" pc="268438957" symbol="refreshWeather"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="27" lineNum="80" parent="globals/TestView" pc="268438979" symbol="refreshWeather"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="27" lineNum="86" parent="globals/TestView" pc="268439018" symbol="refreshWeather"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="27" lineNum="89" parent="globals/TestView" pc="268439025" symbol="refreshWeather"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="27" lineNum="91" parent="globals/TestView" pc="268439060" symbol="refreshWeather"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="27" lineNum="93" parent="globals/TestView" pc="268439085" symbol="refreshWeather"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="27" lineNum="94" parent="globals/TestView" pc="268439113" symbol="refreshWeather"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="27" lineNum="95" parent="globals/TestView" pc="268439141" symbol="refreshWeather"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="27" lineNum="96" parent="globals/TestView" pc="268439169" symbol="refreshWeather"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="27" lineNum="102" parent="globals/TestView" pc="268439203" symbol="refreshWeather"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="27" lineNum="103" parent="globals/TestView" pc="268439220" symbol="refreshWeather"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="27" lineNum="106" parent="globals/TestView" pc="268439227" symbol="refreshWeather"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="27" lineNum="108" parent="globals/TestView" pc="268439290" symbol="refreshWeather"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="28" lineNum="137" parent="globals/TestView" pc="268439327" symbol="doAnimation"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="28" lineNum="138" parent="globals/TestView" pc="268439329" symbol="doAnimation"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="28" lineNum="140" parent="globals/TestView" pc="268439342" symbol="doAnimation"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="28" lineNum="148" parent="globals/TestView" pc="268439434" symbol="doAnimation"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="28" lineNum="150" parent="globals/TestView" pc="268439463" symbol="doAnimation"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="29" lineNum="547" parent="globals/TestView" pc="268439476" symbol="onPartialUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="29" lineNum="551" parent="globals/TestView" pc="268439478" symbol="onPartialUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="30" lineNum="127" parent="globals/TestView" pc="268439528" symbol="stop"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="30" lineNum="128" parent="globals/TestView" pc="268439530" symbol="stop"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="30" lineNum="129" parent="globals/TestView" pc="268439541" symbol="stop"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="30" lineNum="130" parent="globals/TestView" pc="268439559" symbol="stop"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="30" lineNum="131" parent="globals/TestView" pc="268439569" symbol="stop"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="30" lineNum="132" parent="globals/TestView" pc="268439595" symbol="stop"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="31" lineNum="248" parent="globals/TestView" pc="268439608" symbol="getWeatherIcon"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="31" lineNum="250" parent="globals/TestView" pc="268439610" symbol="getWeatherIcon"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="31" lineNum="251" parent="globals/TestView" pc="268439619" symbol="getWeatherIcon"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="31" lineNum="252" parent="globals/TestView" pc="268439632" symbol="getWeatherIcon"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="31" lineNum="254" parent="globals/TestView" pc="268439682" symbol="getWeatherIcon"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="31" lineNum="254" parent="globals/TestView" pc="268439707" symbol="getWeatherIcon"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="31" lineNum="255" parent="globals/TestView" pc="268439757" symbol="getWeatherIcon"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="31" lineNum="255" parent="globals/TestView" pc="268439782" symbol="getWeatherIcon"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="31" lineNum="256" parent="globals/TestView" pc="268439832" symbol="getWeatherIcon"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="31" lineNum="256" parent="globals/TestView" pc="268439857" symbol="getWeatherIcon"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="31" lineNum="257" parent="globals/TestView" pc="268439907" symbol="getWeatherIcon"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="31" lineNum="258" parent="globals/TestView" pc="268439960" symbol="getWeatherIcon"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="31" lineNum="260" parent="globals/TestView" pc="268440010" symbol="getWeatherIcon"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="31" lineNum="261" parent="globals/TestView" pc="268440063" symbol="getWeatherIcon"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="31" lineNum="263" parent="globals/TestView" pc="268440113" symbol="getWeatherIcon"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="31" lineNum="263" parent="globals/TestView" pc="268440138" symbol="getWeatherIcon"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="31" lineNum="264" parent="globals/TestView" pc="268440188" symbol="getWeatherIcon"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="31" lineNum="264" parent="globals/TestView" pc="268440213" symbol="getWeatherIcon"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="32" lineNum="568" parent="globals/TestView" pc="268440264" symbol="onEnterSleep"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="32" lineNum="569" parent="globals/TestView" pc="268440266" symbol="onEnterSleep"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="33" lineNum="62" parent="globals/TestView" pc="268440277" symbol="initialize"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="33" lineNum="63" parent="globals/TestView" pc="268440279" symbol="initialize"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="33" lineNum="67" parent="globals/TestView" pc="268440297" symbol="initialize"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="287" parent="globals/TestView" pc="268440310" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="289" parent="globals/TestView" pc="268440314" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="291" parent="globals/TestView" pc="268440326" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="292" parent="globals/TestView" pc="268440351" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="293" parent="globals/TestView" pc="268440373" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="294" parent="globals/TestView" pc="268440389" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="296" parent="globals/TestView" pc="268440405" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="312" parent="globals/TestView" pc="268440425" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="320" parent="globals/TestView" pc="268440470" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="321" parent="globals/TestView" pc="268440479" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="322" parent="globals/TestView" pc="268440488" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="328" parent="globals/TestView" pc="268440497" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="334" parent="globals/TestView" pc="268440510" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="335" parent="globals/TestView" pc="268440520" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="348" parent="globals/TestView" pc="268440535" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="350" parent="globals/TestView" pc="268440549" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="352" parent="globals/TestView" pc="268440566" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="354" parent="globals/TestView" pc="268440575" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="356" parent="globals/TestView" pc="268440588" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="363" parent="globals/TestView" pc="268440605" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="365" parent="globals/TestView" pc="268440619" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="369" parent="globals/TestView" pc="268440641" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="370" parent="globals/TestView" pc="268440695" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="384" parent="globals/TestView" pc="268440743" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="395" parent="globals/TestView" pc="268440750" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="398" parent="globals/TestView" pc="268440759" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="399" parent="globals/TestView" pc="268440796" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="399" parent="globals/TestView" pc="268440843" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="401" parent="globals/TestView" pc="268440853" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="402" parent="globals/TestView" pc="268440890" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="402" parent="globals/TestView" pc="268440937" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="404" parent="globals/TestView" pc="268440947" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="405" parent="globals/TestView" pc="268440984" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="405" parent="globals/TestView" pc="268441031" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="407" parent="globals/TestView" pc="268441041" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="408" parent="globals/TestView" pc="268441078" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="408" parent="globals/TestView" pc="268441125" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="410" parent="globals/TestView" pc="268441135" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="411" parent="globals/TestView" pc="268441172" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="411" parent="globals/TestView" pc="268441219" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="414" parent="globals/TestView" pc="268441229" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="414" parent="globals/TestView" pc="268441276" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="416" parent="globals/TestView" pc="268441283" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="418" parent="globals/TestView" pc="268441310" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="420" parent="globals/TestView" pc="268441323" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="423" parent="globals/TestView" pc="268441456" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="426" parent="globals/TestView" pc="268441519" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="429" parent="globals/TestView" pc="268441538" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="448" parent="globals/TestView" pc="268441562" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="449" parent="globals/TestView" pc="268441584" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="457" parent="globals/TestView" pc="268441621" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="458" parent="globals/TestView" pc="268441643" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="462" parent="globals/TestView" pc="268441761" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="464" parent="globals/TestView" pc="268441768" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="466" parent="globals/TestView" pc="268441793" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="466" parent="globals/TestView" pc="268441804" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="468" parent="globals/TestView" pc="268441814" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="469" parent="globals/TestView" pc="268441841" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="473" parent="globals/TestView" pc="268441898" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="474" parent="globals/TestView" pc="268441928" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="475" parent="globals/TestView" pc="268441953" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="478" parent="globals/TestView" pc="268441960" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="480" parent="globals/TestView" pc="268441993" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="482" parent="globals/TestView" pc="268442020" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="487" parent="globals/TestView" pc="268442033" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="495" parent="globals/TestView" pc="268442043" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="497" parent="globals/TestView" pc="268442077" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="501" parent="globals/TestView" pc="268442091" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="502" parent="globals/TestView" pc="268442121" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\source\\TestView.mc" id="34" lineNum="509" parent="globals/TestView" pc="268442174" symbol="onUpdate"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\bin\\gen\\006-B2888-00\\source\\Rez.mcgen" id="35" lineNum="52" parent="globals/Rez/Layouts" pc="268442208" symbol="WatchFace"/>
+        <entry filename="D:\\Users\\LuCaCo\\eclipse-workspace\\persona4-watchface\\bin\\gen\\006-B2888-00\\source\\Rez.mcgen" id="35" lineNum="53" parent="globals/Rez/Layouts" pc="268442218" symbol="WatchFace"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry field="true" id="45" symbol="weatherHUD"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="8391333" symbol="delegate"/>
+        <entry field="true" id="65" symbol="map_day"/>
+        <entry id="7" module="true" symbol="globals/Rez/Menus"/>
+        <entry field="true" id="71" symbol="time_evening"/>
+        <entry id="11" object="true" symbol="TestApp"/>
+        <entry field="true" id="20" symbol="dict"/>
+        <entry field="true" id="41" symbol="inLowPower"/>
+        <entry field="true" id="30" symbol="bit"/>
+        <entry field="true" id="40" symbol="img_steps"/>
+        <entry field="true" id="14" symbol="_animationInProg"/>
+        <entry field="true" id="59" symbol="hud_rain"/>
+        <entry field="true" id="24" symbol="weatherCodes"/>
+        <entry field="true" id="70" symbol="time_earlymorning"/>
+        <entry field="true" id="52" symbol="dark_hour"/>
+        <entry id="8390424" module="true" symbol="Storage"/>
+        <entry id="36" method="true" symbol="getWeatherIcon"/>
+        <entry field="true" id="56" symbol="hud_fog"/>
+        <entry id="9" object="true" symbol="BgbgServiceDelegate"/>
+        <entry field="true" id="77" symbol="Latitude"/>
+        <entry field="true" id="39" symbol="img_heart"/>
+        <entry field="true" id="74" symbol="time_night"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry field="true" id="60" symbol="hud_snow"/>
+        <entry field="true" id="66" symbol="map_night"/>
+        <entry field="true" id="69" symbol="time_afternoon"/>
+        <entry field="true" id="44" symbol="time_info"/>
+        <entry field="true" id="76" symbol="AppName"/>
+        <entry id="8" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="43" method="true" symbol="setDistanceDisplay"/>
+        <entry id="8389594" symbol="headers"/>
+        <entry id="8388772" module="true" object="true" symbol="Fonts"/>
+        <entry field="true" id="49" symbol="bit_night"/>
+        <entry field="true" id="8388724" symbol="battery"/>
+        <entry field="true" id="8388912" symbol="steps"/>
+        <entry id="8388631" module="true" symbol="Activity"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="8390097" method="true" symbol="onPartialUpdate"/>
+        <entry field="true" id="57" symbol="hud_none"/>
+        <entry id="34" method="true" symbol="drawBG"/>
+        <entry id="8390425" module="true" symbol="Properties"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry id="23" method="true" symbol="receiveWeather"/>
+        <entry id="8390148" method="true" symbol="onTemporalEvent"/>
+        <entry id="33" method="true" symbol="doTime"/>
+        <entry field="true" id="15" symbol="app_code"/>
+        <entry field="true" id="54" symbol="heart"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry id="8389375" method="true" object="true" symbol="WatchFace"/>
+        <entry field="true" id="8389065" symbol="locY"/>
+        <entry field="true" id="8389064" symbol="locX"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry field="true" id="64" symbol="map_afternoon"/>
+        <entry id="8390169" method="true" symbol="getServiceDelegate"/>
+        <entry id="26" module="true" symbol="Menus"/>
+        <entry id="8389275" method="true" symbol="getApp"/>
+        <entry id="6" module="true" symbol="globals/Rez/Layouts"/>
+        <entry field="true" id="18" symbol="app_temp"/>
+        <entry field="true" id="63" symbol="map"/>
+        <entry id="8391298" method="true" symbol="play"/>
+        <entry id="10" object="true" symbol="DanceDanceAnimationDelegate"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry id="8389376" method="true" symbol="onEnterSleep"/>
+        <entry field="true" id="17" symbol="app_humidity"/>
+        <entry id="12" object="true" symbol="TestView"/>
+        <entry id="5" module="true" symbol="globals/Rez/JsonData"/>
+        <entry field="true" id="8389892" symbol="background"/>
+        <entry field="true" id="8388911" symbol="distance"/>
+        <entry field="true" id="8389306" symbol="lon"/>
+        <entry id="81" symbol="methods"/>
+        <entry field="true" id="75" symbol="weather_hud"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="8390170" method="true" symbol="onBackgroundData"/>
+        <entry id="8391314" method="true" symbol="onAnimationEvent"/>
+        <entry id="8389844" symbol="responseType"/>
+        <entry id="8388699" method="true" symbol="stop"/>
+        <entry id="35" method="true" symbol="drawBackground"/>
+        <entry field="true" id="19" symbol="APIKEY"/>
+        <entry field="true" id="8389305" symbol="lat"/>
+        <entry id="8389377" method="true" symbol="onExitSleep"/>
+        <entry field="true" id="28" symbol="BG_state"/>
+        <entry field="true" id="29" symbol="_playing"/>
+        <entry id="8388645" module="true" symbol="Time"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry field="true" id="22" symbol="home_lon"/>
+        <entry field="true" id="13" symbol="_animation"/>
+        <entry field="true" id="8388720" symbol="hour"/>
+        <entry field="true" id="38" symbol="img_distance"/>
+        <entry field="true" id="50" symbol="bit_rain"/>
+        <entry field="true" id="73" symbol="time_morning"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry field="true" id="72" symbol="time_latenight"/>
+        <entry id="8390088" module="true" object="true" symbol="JsonData"/>
+        <entry field="true" id="78" symbol="Latitude_u"/>
+        <entry field="true" id="46" symbol="LauncherIcon"/>
+        <entry field="true" id="31" symbol="clockTime"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry field="true" id="21" symbol="home_lat"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry field="true" id="53" symbol="darkhour"/>
+        <entry id="8390146" module="true" symbol="Background"/>
+        <entry field="true" id="51" symbol="bit_snow"/>
+        <entry field="true" id="48" symbol="bit_day"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry field="true" id="61" symbol="hud_sunny"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry field="true" id="16" symbol="app_feels"/>
+        <entry field="true" id="37" symbol="img_battery"/>
+        <entry field="true" id="79" symbol="Longitude"/>
+        <entry field="true" id="58" symbol="hud_partlycloudy"/>
+        <entry field="true" id="27" symbol="_controller"/>
+        <entry id="42" method="true" symbol="refreshWeather"/>
+        <entry id="25" module="true" symbol="Layouts"/>
+        <entry field="true" id="67" symbol="map_rain"/>
+        <entry field="true" id="47" symbol="bit_afternoon"/>
+        <entry id="4" module="true" symbol="globals/Rez/Fonts"/>
+        <entry field="true" id="62" symbol="hud_thunder"/>
+        <entry id="32" method="true" symbol="doAnimation"/>
+        <entry field="true" id="55" symbol="hud_cloudy"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry field="true" id="80" symbol="Longitude_u"/>
+        <entry field="true" id="68" symbol="map_snow"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268436268" name="data" stackId="1" startPc="268435636"/>
+        <entry endPc="268435799" name="lat" stackId="2" startPc="268435666"/>
+        <entry endPc="268436267" name="prevCode" stackId="3" startPc="268436088"/>
+        <entry arg="true" endPc="268436815" name="responseCode" stackId="1" startPc="268436609"/>
+        <entry arg="true" endPc="268436815" name="data" stackId="2" startPc="268436609"/>
+        <entry endPc="268436790" name="weather" stackId="3" startPc="268436624"/>
+        <entry endPc="268436790" name="temperature" stackId="4" startPc="268436624"/>
+        <entry endPc="268436790" name="feels" stackId="5" startPc="268436624"/>
+        <entry endPc="268436790" name="humidity" stackId="6" startPc="268436624"/>
+        <entry endPc="268437306" name="UNITS" stackId="1" startPc="268436820"/>
+        <entry endPc="268437306" name="url" stackId="2" startPc="268436820"/>
+        <entry endPc="268437306" name="param" stackId="3" startPc="268436820"/>
+        <entry endPc="268437306" name="options" stackId="4" startPc="268436820"/>
+        <entry arg="true" endPc="268437434" name="controller" stackId="1" startPc="268437404"/>
+        <entry arg="true" endPc="268437514" name="event" stackId="1" startPc="268437435"/>
+        <entry arg="true" endPc="268437514" name="options" stackId="2" startPc="268437435"/>
+        <entry arg="true" endPc="268437742" name="dc" stackId="1" startPc="268437622"/>
+        <entry arg="true" endPc="268437742" name="time" stackId="2" startPc="268437622"/>
+        <entry arg="true" endPc="268438107" name="dc" stackId="1" startPc="268437743"/>
+        <entry arg="true" endPc="268438546" name="dc" stackId="1" startPc="268438108"/>
+        <entry arg="true" endPc="268438803" name="dc" stackId="1" startPc="268438572"/>
+        <entry arg="true" endPc="268438952" name="dc" stackId="1" startPc="268438804"/>
+        <entry endPc="268438951" name="xpos" stackId="2" startPc="268438808"/>
+        <entry endPc="268438951" name="dist" stackId="3" startPc="268438808"/>
+        <entry endPc="268439325" name="timeLastGPS" stackId="1" startPc="268438957"/>
+        <entry endPc="268439325" name="dur" stackId="2" startPc="268438957"/>
+        <entry endPc="268439322" name="lastTime" stackId="3" startPc="268439203"/>
+        <entry arg="true" endPc="268439527" name="dc" stackId="1" startPc="268439476"/>
+        <entry arg="true" endPc="268440263" name="dc" stackId="1" startPc="268439608"/>
+        <entry arg="true" endPc="268442207" name="dc" stackId="1" startPc="268440310"/>
+        <entry endPc="268442206" name="min" stackId="2" startPc="268440314"/>
+        <entry endPc="268442206" name="sec" stackId="3" startPc="268440314"/>
+        <entry endPc="268442203" name="day_xpos" stackId="4" startPc="268440549"/>
+        <entry endPc="268442203" name="now" stackId="5" startPc="268440549"/>
+        <entry endPc="268442203" name="date" stackId="6" startPc="268440549"/>
+        <entry endPc="268442039" name="HRS" stackId="7" startPc="268441960"/>
+        <entry arg="true" endPc="268442224" name="dc" stackId="1" startPc="268442208"/>
+    </localVars>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="battery"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="time_earlymorning"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Longitude_u"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="hud_partlycloudy"/>
+        <annotationEntry annotation="background" class="BgbgServiceDelegate" module="globals" symbol="home_lat"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="map_day"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="hud_none"/>
+        <annotationEntry annotation="background" class="BgbgServiceDelegate" module="globals" symbol="onTemporalEvent"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="distance"/>
+        <annotationEntry annotation="background" class="BgbgServiceDelegate" module="globals" symbol="initialize"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="hud_rain"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="dark_hour"/>
+        <annotationEntry annotation="background" class="TestApp" module="globals" symbol="getInitialView"/>
+        <annotationEntry annotation="background" class="TestApp" module="globals" symbol="onStop"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="time_afternoon"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="time_night"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="weather_hud"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="steps"/>
+        <annotationEntry annotation="background" class="BgbgServiceDelegate" module="globals" symbol="APIKEY"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="darkhour"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="heart"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Latitude_u"/>
+        <annotationEntry annotation="background" class="TestApp" module="globals" symbol="getServiceDelegate"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="hud_fog"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="hud_thunder"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="map"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="map_snow"/>
+        <annotationEntry annotation="background" class="BgbgServiceDelegate" module="globals" symbol="lat"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="bit_day"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="background" class="TestApp" module="globals" symbol="onStart"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="map_rain"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="time_latenight"/>
+        <annotationEntry annotation="background" class="TestApp" module="globals" symbol="onBackgroundData"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+        <annotationEntry annotation="background" class="TestApp" module="globals" symbol="initialize"/>
+        <annotationEntry annotation="background" class="BgbgServiceDelegate" module="globals" symbol="receiveWeather"/>
+        <annotationEntry annotation="background" class="BgbgServiceDelegate" module="globals" symbol="dict"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="bit_rain"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="bit_afternoon"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="hud_snow"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="bit_night"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="map_afternoon"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="time_evening"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="hud_sunny"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="time_info"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Longitude"/>
+        <annotationEntry annotation="background" class="BgbgServiceDelegate" module="globals" symbol="lon"/>
+        <annotationEntry annotation="background" class="BgbgServiceDelegate" module="globals" symbol="weatherCodes"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="time_morning"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Latitude"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="hud_cloudy"/>
+        <annotationEntry annotation="background" class="BgbgServiceDelegate" module="globals" symbol="home_lon"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="bit_snow"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="map_night"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="87" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/TestApp" offset="222" parentId="globals" symbolId="TestApp" type="class"/>
+        <dataEntry label="globals/BgbgServiceDelegate" offset="309" parentId="globals" symbolId="BgbgServiceDelegate" type="class"/>
+        <dataEntry label="globals/Rez" offset="1262" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/DanceDanceAnimationDelegate" offset="1341" parentId="globals" symbolId="DanceDanceAnimationDelegate" type="class"/>
+        <dataEntry label="globals/TestView" offset="1404" parentId="globals" symbolId="TestView" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="1683" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="1986" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="2025" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Fonts" offset="2056" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="2087" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/Rez/JsonData" offset="2158" parentId="Rez" symbolId="JsonData" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435478" name="&lt;init&gt;" parent="TestApp" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435481" name="onStart" parent="TestApp" startPc="268435479">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435524" name="getServiceDelegate" parent="TestApp" startPc="268435482">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435614" name="getInitialView" parent="TestApp" startPc="268435525">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435635" name="initialize" parent="TestApp" startPc="268435615">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436268" name="onBackgroundData" parent="TestApp" startPc="268435636">
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436271" name="onStop" parent="TestApp" startPc="268436269">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436608" name="&lt;init&gt;" parent="BgbgServiceDelegate" startPc="268436272">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436815" name="receiveWeather" parent="BgbgServiceDelegate" startPc="268436609">
+            <param id="responseCode"/>
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437307" name="onTemporalEvent" parent="BgbgServiceDelegate" startPc="268436816">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437332" name="initialize" parent="BgbgServiceDelegate" startPc="268437308">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437360" name="getApp" startPc="268437333">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437384" name="&lt;init&gt;" parent="Rez" startPc="268437361">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437403" name="&lt;init&gt;" parent="DanceDanceAnimationDelegate" startPc="268437385">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437434" name="initialize" parent="DanceDanceAnimationDelegate" startPc="268437404">
+            <param id="controller"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437514" name="onAnimationEvent" parent="DanceDanceAnimationDelegate" startPc="268437435">
+            <param id="event"/>
+            <param id="options"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437533" name="&lt;init&gt;" parent="TestView" startPc="268437515">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437621" name="play" parent="TestView" startPc="268437534">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437742" name="doTime" parent="TestView" startPc="268437622">
+            <param id="dc"/>
+            <param id="time"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="protected" endPc="268438107" name="drawBG" parent="TestView" startPc="268437743">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="protected" endPc="268438546" name="drawBackground" parent="TestView" startPc="268438108">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="TestView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438571" name="onExitSleep" parent="TestView" startPc="268438547">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShow" parent="TestView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438803" name="onLayout" parent="TestView" startPc="268438572">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="protected" endPc="268438952" name="setDistanceDisplay" parent="TestView" startPc="268438804">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439326" name="refreshWeather" parent="TestView" startPc="268438953">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439475" name="doAnimation" parent="TestView" startPc="268439327">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439527" name="onPartialUpdate" parent="TestView" startPc="268439476">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439607" name="stop" parent="TestView" startPc="268439528">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440263" name="getWeatherIcon" parent="TestView" startPc="268439608">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440276" name="onEnterSleep" parent="TestView" startPc="268440264">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440309" name="initialize" parent="TestView" startPc="268440277">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442207" name="onUpdate" parent="TestView" startPc="268440310">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Menus">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Fonts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="JsonData">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442224" name="WatchFace" parent="Layouts" startPc="268442208">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>

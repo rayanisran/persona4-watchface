@@ -1,0 +1,141 @@
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 3; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 4; ]
+using Toybox.Graphics;
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 5; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 7; ]
+module Rez {
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 8; ]
+    module Drawables {
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 9; @position = 27; initialized = true; ]
+        var hud_sunny as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 10; @position = 27; initialized = true; ]
+        var hud_partlycloudy as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 11; @position = 27; initialized = true; ]
+        var hud_cloudy as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 12; @position = 27; initialized = true; ]
+        var hud_rain as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 13; @position = 27; initialized = true; ]
+        var hud_thunder as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 14; @position = 27; initialized = true; ]
+        var hud_snow as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 15; @position = 27; initialized = true; ]
+        var hud_fog as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 16; @position = 27; initialized = true; ]
+        var hud_none as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 17; @position = 27; initialized = true; ]
+        var weather_hud as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 18; @position = 27; initialized = true; ]
+        var time_earlymorning as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 19; @position = 27; initialized = true; ]
+        var time_morning as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 20; @position = 27; initialized = true; ]
+        var time_afternoon as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 21; @position = 27; initialized = true; ]
+        var time_evening as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 22; @position = 27; initialized = true; ]
+        var time_night as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 23; @position = 27; initialized = true; ]
+        var time_latenight as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 24; @position = 27; initialized = true; ]
+        var time_info as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 25; @position = 27; initialized = true; ]
+        var map_day as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 26; @position = 27; initialized = true; ]
+        var map_afternoon as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 27; @position = 27; initialized = true; ]
+        var map_night as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 28; @position = 27; initialized = true; ]
+        var map_rain as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 29; @position = 27; initialized = true; ]
+        var map_snow as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 30; @position = 27; initialized = true; ]
+        var map as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 31; @position = 27; initialized = true; ]
+        var bit_day as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 32; @position = 27; initialized = true; ]
+        var bit_afternoon as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 33; @position = 27; initialized = true; ]
+        var bit_night as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 34; @position = 27; initialized = true; ]
+        var bit_rain as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 35; @position = 27; initialized = true; ]
+        var bit_snow as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 36; @position = 27; initialized = true; ]
+        var battery as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 37; @position = 27; initialized = true; ]
+        var heart as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 38; @position = 27; initialized = true; ]
+        var distance as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 39; @position = 27; initialized = true; ]
+        var steps as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 40; @position = 27; initialized = true; ]
+        var LauncherIcon as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 41; @position = 27; initialized = true; ]
+        var darkhour as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 42; @position = 27; initialized = true; ]
+        var dark_hour as Symbol;
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 45; ]
+    module Fonts {
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 45; ]
+        <init> {
+        }
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 48; ]
+    module JsonData {
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 48; ]
+        <init> {
+        }
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 51; ]
+    module Layouts {
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 51; ]
+        <init> {
+        }
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 52; ]
+        function WatchFace(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_bin_gen_006_B2888_00_source_Rez_mcgen_52_73_start:
+[ "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen" 53 12 ]
+            %tmp.1 = newa Array<WatchUi.Drawable> 0;
+            ret %tmp.1;
+D_Users_LuCaCo_eclipse_workspace_persona4_watchface_bin_gen_006_B2888_00_source_Rez_mcgen_52_73_stop:
+        }
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 57; ]
+    module Menus {
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 57; ]
+        <init> {
+        }
+    }
+    [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 60; ]
+    module Strings {
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 60; ]
+        <init> {
+        }
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 61; @position = 27; initialized = true; ]
+        var Latitude_u as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 62; @position = 27; initialized = true; ]
+        var Latitude as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 63; @position = 27; initialized = true; ]
+        var Longitude_u as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 64; @position = 27; initialized = true; ]
+        var Longitude as Symbol;
+        [ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 65; @position = 27; initialized = true; ]
+        var AppName as Symbol;
+    }
+}
+[ @file = "D:\Users\LuCaCo\eclipse-workspace\persona4-watchface\bin\gen\006-B2888-00\source\Rez.mcgen"; @line = 1; ]
+<init> {
+}

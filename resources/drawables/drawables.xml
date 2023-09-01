@@ -1,0 +1,42 @@
+<drawables>
+    <bitmap id="LauncherIcon" filename="launcher_icon.png" />
+    
+    <bitmap id="hud_sunny" filename="hud_sunny.png" />
+    <bitmap id="hud_partlycloudy" filename="hud_partlycloudy.png" />
+    <bitmap id="hud_cloudy" filename="hud_cloudy.png" />
+    <bitmap id="hud_rain" filename="hud_rain.png" />
+    <bitmap id="hud_thunder" filename="hud_thunder.png" />
+    <bitmap id="hud_snow" filename="hud_snow.png" />
+    <bitmap id="hud_fog" filename="hud_fog.png" />
+    <bitmap id="hud_none" filename="hud_none.png" />
+    
+    <bitmap id="weather_hud" filename="hud_fog.png" />
+    
+    <bitmap id="time_earlymorning" filename="e_earlymorning.png" compress="true" />
+    <bitmap id="time_morning" filename="e_morning.png" compress="true" />
+    <bitmap id="time_afternoon" filename="e_afternoon.png" compress="true" />
+    <bitmap id="time_evening" filename="e_evening.png" compress="true" />
+    <bitmap id="time_night" filename="e_night.png" compress="true" />
+    <bitmap id="time_latenight" filename="e_latenight.png" compress="true" />
+    
+    <bitmap id="time_info" filename="e_night.png" compress="true" />
+    
+    <bitmap id="map_day" filename="inaba_day.jpg" dithering="floyd_steinberg" compress="true" />
+    <bitmap id="map_afternoon" filename="inaba_afternoon.jpg" dithering="floyd_steinberg" compress="true" />
+    <bitmap id="map_night" filename="inaba_night.jpg" dithering="floyd_steinberg" compress="true" />
+    <bitmap id="map_rain" filename="inaba_rain.jpg" dithering="floyd_steinberg" compress="true" />
+    <bitmap id="map_snow" filename="inaba_snow.jpg" dithering="floyd_steinberg" compress="true" />
+    
+    <bitmap id="map" filename="inaba_night.jpg" dithering="floyd_steinberg" compress="true" />
+
+	<bitmap id="bit_day" filename="bit_inaba_day.jpg" dithering="floyd_steinberg" compress="true" />
+	<bitmap id="bit_afternoon" filename="bit_inaba_afternoon.jpg" dithering="floyd_steinberg" compress="true" />
+	<bitmap id="bit_night" filename="bit_inaba_night.jpg" dithering="floyd_steinberg" compress="true" />
+	<bitmap id="bit_rain" filename="bit_inaba_rain.jpg" dithering="floyd_steinberg" compress="true" />
+	<bitmap id="bit_snow" filename="bit_inaba_snow.jpg" dithering="floyd_steinberg" compress="true" />
+	
+    <bitmap id="battery" filename="battery.png" />
+    <bitmap id="heart" filename="heart.png" />
+    <bitmap id="distance" filename="distance.png" />
+    <bitmap id="steps" filename="footsteps.png" />
+</drawables>
